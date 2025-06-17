@@ -1,25 +1,36 @@
 import logo from '../assets/brainleads.png'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
+// import { faBar } from '@fortawesome/free-brands-svg-icons'
+import { useState } from 'react'
 
 export default function Nav() {
+    const [showMenu, setShowMenu] = useState(false)
     return (
-        <section className="fixed z-[999] top-5 left-0 py-2 px-[50px] mx-[50px] right-0 rounded-full">
+        <section className="fixed z-[999] top-5 left-0 py-2 lg:px-[50px] px-[25px] lg:mx-[50px] mx-[25px] right-0 rounded-full">
             <div className='flex items-center justify-between '>
                 <a href='/' className='flex items-center gap-2 z-[999]'>
                     <img src={logo} className='w-[40px]'/>
                     <p>Brainleads</p>
                 </a>
-                <div className='z-[999] hidden lg:block'>
-                    <ul className='flex items-center gap-5 '>
+                <div className={`${showMenu? 'flex':'hidden'} z-[999] lg:relative lg:top-0 absolute top-16 lg:block flex-col items-center gap-5 bg-white lg:bg-inherit w-full lg:w-auto right-0 left-0 lg:p-0 p-5 lg:rounded-none rounded-xl`}>
+                    <ul className='flex items-center lg:flex-row flex-col gap-5 '>
                         <li className='cursor-pointer hover:bg-[#FFC734] px-4 py-1 rounded-lg'><a>Home</a></li>
                         <li className='cursor-pointer hover:bg-[#FFC734] px-4 py-1 rounded-lg'><a>Services</a></li>
                         <li className='cursor-pointer hover:bg-[#FFC734] px-4 py-1 rounded-lg'><a>Benefits</a></li>
                         <li className='cursor-pointer hover:bg-[#FFC734] px-4 py-1 rounded-lg'><a>Contact</a></li>
                     </ul>
+                    <button className='lg:hidden primary-bg px-4 py-1 rounded-full font-semibold transition-colors duration-300'>
+                        Sign Up
+                    </button>
                 </div>
                 <div className='z-[999] hidden lg:block'>
                     <button className='primary-bg px-4 py-1 rounded-full font-semibold transition-colors duration-300'>
                         Sign Up
                     </button>
+                </div>
+                <div onClick={()=>setShowMenu(!showMenu)} className='z-[998] lg:hidden'>
+                    <FontAwesomeIcon icon={faBars} className='text-2xl mx-2 cursor-pointer hover:text-[#FFB000] transition-colors duration-300' />
                 </div>
             </div>
             <div className='bg-white opacity-50 w-full h-full absolute top-0 left-0 right-0 rounded-full'></div>
