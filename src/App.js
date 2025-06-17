@@ -8,8 +8,19 @@ import Process from "./components/Process";
 import Testimonials from "./components/Testimonials";
 import CTA from "./components/CTA";
 import Footer from "./components/Footer";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
-export default function App() {
+
+function App() {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // animation duration
+      once: true,     // whether animation should happen only once
+    });
+  }, []);
   return (
     <div className="bg-gray-50 text-gray-800 font-sans">
       <Nav />
@@ -24,3 +35,5 @@ export default function App() {
     </div>
   );
 }
+
+export default App;
