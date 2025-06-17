@@ -8,7 +8,7 @@ export default function Nav() {
                     <img src={logo} className='w-[40px]'/>
                     <p>Brainleads</p>
                 </a>
-                <div className='z-[999]'>
+                <div className='z-[999] hidden lg:block'>
                     <ul className='flex items-center gap-5 '>
                         <li className='cursor-pointer hover:bg-[#FFC734] px-4 py-1 rounded-lg'><a>Home</a></li>
                         <li className='cursor-pointer hover:bg-[#FFC734] px-4 py-1 rounded-lg'><a>Services</a></li>
@@ -16,7 +16,7 @@ export default function Nav() {
                         <li className='cursor-pointer hover:bg-[#FFC734] px-4 py-1 rounded-lg'><a>Contact</a></li>
                     </ul>
                 </div>
-                <div className='z-[999]'>
+                <div className='z-[999] hidden lg:block'>
                     <button className='primary-bg px-4 py-1 rounded-full font-semibold transition-colors duration-300'>
                         Sign Up
                     </button>
