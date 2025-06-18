@@ -25,12 +25,12 @@ function App() {
     <div className="bg-gray-50 text-gray-800 font-sans">
       <Nav />
       <Hero />
-      <WhyChooseUs />
       <Services />
+      <CTA />
+      <WhyChooseUs />
       <Results />
       <Process />
       <Testimonials />
-      <CTA />
       <Footer />
     </div>
   );
