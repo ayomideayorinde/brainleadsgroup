@@ -22,12 +22,12 @@ export default function Services() {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 p-6">
         {serviceCard.map((service, index) => (
-          <div key={index} className="shadow-lg rounded-lg p-4 hover:shadow-2xl transition-shadow duration-300 card-bg" data-aos="fade-up" data-aos-delay={index * 100}>
+          <div key={index} className="flex flex-col items-start lg:items-center shadow-lg rounded-lg p-4 hover:shadow-2xl transition-shadow duration-300 card-bg" data-aos="fade-up" data-aos-delay={index * 100}>
             <div className="flex items-center justify-center mb-4">
               <FontAwesomeIcon icon={service.icon} className="text-4xl ml-2 text-[#FFB000]" />
             </div>
-            <h2 className="text-center text-xl font-semibold mb-2">{service.title}</h2>
-            <p className="text-center ">{service.desc}</p>
+            <h2 className="text-xl font-semibold mb-2">{service.title}</h2>
+            <p className="lg:text-center text-justify">{service.desc}</p>
           </div>
         ))}
       </div>
