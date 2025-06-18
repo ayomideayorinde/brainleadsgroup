@@ -24,7 +24,7 @@ export default function Services() {
         {serviceCard.map((service, index) => (
           <div key={index} className="shadow-lg rounded-lg p-4 hover:shadow-2xl transition-shadow duration-300 card-bg" data-aos="fade-up" data-aos-delay={index * 100}>
             <div className="flex items-center justify-center mb-4">
-              <FontAwesomeIcon icon={service.icon} className="text-2xl ml-2 text-[#FFB000]" />
+              <FontAwesomeIcon icon={service.icon} className="text-4xl ml-2 text-[#FFB000]" />
             </div>
             <h2 className="text-center text-xl font-semibold mb-2">{service.title}</h2>
             <p className="text-center ">{service.desc}</p>
