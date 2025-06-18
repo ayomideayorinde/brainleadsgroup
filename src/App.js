@@ -11,6 +11,7 @@ import Footer from "./components/Footer";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
+import Benefits from "./components/Benefits";
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
       <Hero />
       <Services />
       <CTA />
+      <Benefits />
       <WhyChooseUs />
       <Results />
       <Process />
