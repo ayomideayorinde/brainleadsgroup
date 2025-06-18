@@ -26,3 +26,11 @@ code {
 .primary-fg {
   color: #FFC734;
 }
+.card-bg {
+  background-color: #FFFFFF;
+}
+.card-bg:hover {
+  background-color: #333333;
+  transition: background-color 0.8s ease-in-out;
+  color: #FFFFFF;
+}

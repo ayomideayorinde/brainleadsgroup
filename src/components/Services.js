@@ -17,7 +17,7 @@ export default function Services() {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-6">
         {serviceCard.map((service, index) => (
-          <div key={index} className="bg-white shadow-lg rounded-lg p-4 hover:shadow-2xl transition-shadow duration-300 hover:bg-[#333333] hover:text-white">
+          <div key={index} className="shadow-lg rounded-lg p-4 hover:shadow-2xl transition-shadow duration-300 card-bg">
             <div className="flex items-center justify-center mb-4">
               <FontAwesomeIcon icon={service.icon} className="text-2xl ml-2 text-[#FFB000]" />
             </div>
