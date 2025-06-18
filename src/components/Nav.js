@@ -13,20 +13,20 @@ export default function Nav() {
                     <img src={logo} className='w-[40px]'/>
                     <p>Brainleads</p>
                 </a>
-                <div className={`${showMenu? 'flex':'hidden'} z-[999] lg:relative lg:top-0 absolute top-16 lg:block flex-col items-center gap-5 bg-white lg:bg-inherit w-full lg:w-auto right-0 left-0 lg:p-0 p-5 lg:rounded-none rounded-xl`}>
+                <div className={`${showMenu? 'flex':'hidden'} z-[999] lg:relative lg:top-0 absolute top-16 lg:block flex-col items-center gap-5 bg-white lg:bg-inherit w-full lg:w-auto right-0 left-0 lg:p-0 p-5 lg:rounded-none rounded-xl transition-all duration-[2s] ease-in-out`}>
                     <ul className='flex items-center lg:flex-row flex-col gap-5 '>
-                        <li className='cursor-pointer hover:bg-[#FFC734] px-4 py-1 rounded-lg'><a>Home</a></li>
-                        <li className='cursor-pointer hover:bg-[#FFC734] px-4 py-1 rounded-lg'><a>Services</a></li>
+                        <li className='cursor-pointer hover:bg-[#FFC734] px-4 py-1 rounded-lg'><a href='/'>Home</a></li>
+                        <li className='cursor-pointer hover:bg-[#FFC734] px-4 py-1 rounded-lg'><a href='#services'>Services</a></li>
                         <li className='cursor-pointer hover:bg-[#FFC734] px-4 py-1 rounded-lg'><a>Benefits</a></li>
                         <li className='cursor-pointer hover:bg-[#FFC734] px-4 py-1 rounded-lg'><a>Contact</a></li>
                     </ul>
                     <button className='lg:hidden primary-bg px-4 py-1 rounded-full font-semibold transition-colors duration-300'>
-                        Sign Up
+                        Book A Free Consultation
                     </button>
                 </div>
                 <div className='z-[999] hidden lg:block'>
                     <button className='primary-bg px-4 py-1 rounded-full font-semibold transition-colors duration-300'>
-                        Sign Up
+                        Book A Free Consultation
                     </button>
                 </div>
                 <div onClick={()=>setShowMenu(!showMenu)} className='z-[998] lg:hidden'>

@@ -15,9 +15,10 @@ const serviceCard = [
 
 export default function Services() {
   return (
-    <section className="bg-[#F8F9FC]  py-5 lg:px-[50px]">
-      <div className="text-center py-12">
+    <section className="bg-[#F8F9FC]  py-5 lg:px-[50px]" id='services'>
+      <div className="text-center py-8 flex flex-col items-center gap-4 px-[25px] ">
         <h1 className="text-3xl">Comprehensive Marketing Strategy</h1>
+        <h2 className='text-2xl primary-fg bg-[#333333] px-5 py-1 text-center rounded-full'>What We Offer</h2>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 p-6">
         {serviceCard.map((service, index) => (
