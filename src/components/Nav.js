@@ -7,7 +7,7 @@ import { useState } from 'react'
 export default function Nav() {
     const [showMenu, setShowMenu] = useState(false)
     return (
-        <section className="fixed z-[999] top-5 left-0 py-2 lg:px-[50px] px-[25px] lg:mx-[50px] mx-[25px] right-0 rounded-full">
+        <section className="fixed z-[999] top-5 left-0 py-2 lg:px-[50px] px-[25px] lg:mx-[50px] mx-[25px] right-0 rounded-full shadow-lg">
             <div className='flex items-center justify-between '>
                 <a href='/' className='flex items-center gap-2 z-[999]'>
                     <img src={logo} className='w-[40px]'/>
@@ -17,8 +17,8 @@ export default function Nav() {
                     <ul className='flex items-center lg:flex-row flex-col gap-5 '>
                         <li className='cursor-pointer hover:bg-[#FFC734] px-4 py-1 rounded-lg'><a href='/'>Home</a></li>
                         <li className='cursor-pointer hover:bg-[#FFC734] px-4 py-1 rounded-lg'><a href='#services'>Services</a></li>
-                        <li className='cursor-pointer hover:bg-[#FFC734] px-4 py-1 rounded-lg'><a>Benefits</a></li>
-                        <li className='cursor-pointer hover:bg-[#FFC734] px-4 py-1 rounded-lg'><a>Contact</a></li>
+                        <li className='cursor-pointer hover:bg-[#FFC734] px-4 py-1 rounded-lg'><a href='#benefits'>Benefits</a></li>
+                        <li className='cursor-pointer hover:bg-[#FFC734] px-4 py-1 rounded-lg'><a href='#contact'>Contact</a></li>
                     </ul>
                     <button className='lg:hidden primary-bg px-4 py-1 rounded-full font-semibold transition-colors duration-300'>
                         Book A Free Consultation

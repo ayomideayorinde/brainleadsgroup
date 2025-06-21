@@ -1,7 +1,5 @@
-import React from "react";
 import Nav from "./components/Nav";
 import Hero from "./components/Hero";
-import WhyChooseUs from "./components/WhyChooseUs";
 import Services from "./components/Services";
 import Results from "./components/Results";
 import Process from "./components/Process";
@@ -12,6 +10,9 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
 import Benefits from "./components/Benefits";
+import CTA2 from "./components/CTA2";
+import WhyChooseUs from "./components/WhyChooseUs";
+import Contact from "./components/Contact";
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
       once: true,     // whether animation should happen only once
     });
   }, []);
+  
   return (
     <div className="bg-gray-50 text-gray-800 font-sans">
       <Nav />
@@ -29,10 +31,12 @@ function App() {
       <Services />
       <CTA />
       <Benefits />
-      <WhyChooseUs />
       <Results />
       <Process />
+      <CTA2 />
+      <WhyChooseUs />
       <Testimonials />
+      <Contact />
       <Footer />
     </div>
   );
