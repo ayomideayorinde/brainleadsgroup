@@ -29,7 +29,7 @@ export default function Nav() {
                         Book A Free Consultation
                     </button>
                 </div>
-                <div onClick={()=>setShowMenu(!showMenu)} tabIndex={0} onBlur={() => setShowMenu(false)} onScroll={() => setShowMenu(false)} className='z-[998] lg:hidden'>
+                <div onClick={()=>setShowMenu(!showMenu)} tabIndex={0} onBlur={() => setShowMenu(false)} onChange={() => setShowMenu(false)} className='z-[998] lg:hidden'>
                     <FontAwesomeIcon icon={faBars} className='text-2xl mx-2 cursor-pointer hover:text-[#FFB000] transition-colors duration-300' />
                 </div>
             </div>
