@@ -11,8 +11,7 @@ export default function CTA2() {
                 </p>
             </div>
             <div className="flex justify-center">
-                <button className="primary-bg px-6 py-3 rounded-full text-white font-semibold transition-colors duration-300 hover:bg-[#FFB000]">
-                    Book A Free Consultation
+                <button className="primary-bg px-6 py-3 rounded-full text-white font-semibold transition-colors duration-300 hover:bg-[#FFB000]"><a href='https://calendly.com/brainleadsgroup/30min' target='_blank'>Book A Free Consultation</a>
                 </button>
             </div>
         </section>

@@ -11,7 +11,7 @@ export default function Hero() {
         <p className='text-[18px] lg:text-[20px]'>
             Your business deserves to prosper. Whether local or global, we create your path through digital marketing.
         </p>
-        <button className='rounded-full font-bold primary-bg px-5 py-3'>Book A Free Consultation</button>
+        <button className='rounded-full font-bold primary-bg px-5 py-3'><a href='https://calendly.com/brainleadsgroup/30min' target='_blank'>Book A Free Consultation</a></button>
       </div>
     </section>
   );
