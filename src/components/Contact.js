@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope, faPhone, faMapLocation, faClock } from '@fortawesome/free-solid-svg-icons'
 //import {  } from '@fortawesome/free-brands-svg-icons'
+import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 
 export default function Contact() {
@@ -54,15 +55,15 @@ export default function Contact() {
                     className="w-full mx-auto bg-[#333333] p-6 rounded-lg shadow-lg">
                     <div className="mb-4">
                         <label className="block text-white mb-2" htmlFor="name">Name</label>
-                        <input type="text" id="name" placeholder="Your name" className="w-full p-3 border border-gray-300 rounded" required />
+                        <input type="text" id="name" name='name' placeholder="Your name" className="w-full p-3 border border-gray-300 rounded" required />
                     </div>
                     <div className="mb-4">
                         <label className="block text-white" htmlFor="email">Email</label>
-                        <input type="email" id="email" placeholder='Your email' className="w-full p-3 border border-gray-300 rounded" required />
+                        <input type="email" id="email" name='email' placeholder='Your email' className="w-full p-3 border border-gray-300 rounded" required />
                     </div>
                     <div className="mb-4">
                         <label className="block text-white mb-2" htmlFor="message">Message</label>
-                        <textarea id="message" rows="4" placeholder="Your message" className="w-full p-3 border border-gray-300 rounded" required></textarea>
+                        <textarea id="message" name='message' rows="4" placeholder="Your message" className="w-full p-3 border border-gray-300 rounded" required></textarea>
                     </div>
                     <button type="submit" className="primary-bg w-full py-3 rounded-full text-white font-semibold transition-colors duration-300 hover:bg-[#FFC734]">
                         Send Message
