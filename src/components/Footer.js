@@ -15,7 +15,7 @@ export default function Footer() {
       </div>
       <div className="flex flex-col items-center lg:items-start gap-4">
         <h1 className='text-xl font-bold'>Quick Links</h1>
-        <ul className="space-y-2">
+        <ul className="space-y-2  text-center lg:text-left">
           <li><a href="/">Home</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#benefits">Benefits</a></li>

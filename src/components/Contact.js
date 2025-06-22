@@ -40,8 +40,8 @@ export default function Contact() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 py-6">
                 <div className="flex flex-col items-center lg:items-start gap-4 mb-6">
                     <h3 className="text-xl font-semibold">We'd Love to Hear From You!</h3>
-                    <p className="text-gray-600">Whether you have a question about our services, pricing, or anything else, our team is ready to answer all your questions.</p>
-                    <p className="text-gray-600">Feel free to reach out via the contact form or contact us directly at:</p>
+                    <p className="text-gray-600 text-center lg:text-left">Whether you have a question about our services, pricing, or anything else, our team is ready to answer all your questions.</p>
+                    <p className="text-gray-600 text-center lg:text-left">Feel free to reach out via the contact form or contact us directly at:</p>
                     <h3 className="text-xl font-semibold">Contacts Info</h3>
                     <p className="text-gray-600"><strong><FontAwesomeIcon icon={faEnvelope} className='text-[#FFB000]'/> Email:</strong> <a href="mailto:contact@brainleads.com" className="font-semibold">brainleadsgroup@gmail.com</a></p>
                     <p className="text-gray-600"><strong><FontAwesomeIcon icon={faPhone} className='text-[#FFB000]'/> Phone:</strong> <a href="tel:+1 204 952 4290" className="font-semibold">+1 204 952 4290</a></p>
