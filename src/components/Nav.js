@@ -2,10 +2,27 @@ import logo from '../assets/brainleads.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 // import { faBar } from '@fortawesome/free-brands-svg-icons'
-import { useState, } from 'react'
+import { useState, useRef, useEffect } from 'react'
 
 export default function Nav() {
     const [showMenu, setShowMenu] = useState(false)
+
+    const menuRef = useRef(null)
+
+    // Detect clicks outside the menu to close it
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+        if (menuRef.current && !menuRef.current.contains(event.target)) {
+            setShowMenu(false)
+        }
+        }
+
+        document.addEventListener('mousedown', handleClickOutside)
+        return () => {
+        document.removeEventListener('mousedown', handleClickOutside)
+        }
+    }, [])
+
     return (
         <section className="fixed z-[999] top-5 left-0 py-2 lg:px-[50px] px-[25px] lg:mx-[50px] mx-[25px] right-0 rounded-full shadow-lg">
             <div className='flex items-center justify-between '>
@@ -13,7 +30,7 @@ export default function Nav() {
                     <img src={logo} className='w-[40px]'/>
                     <p>Brainleads</p>
                 </a>
-                <div className={`${showMenu? 'flex openmenu':'hidden closemenu'} z-[999] lg:relative lg:top-0 absolute top-16 lg:block flex-col items-center gap-5 bg-white lg:bg-inherit w-full lg:w-auto right-0 left-0 lg:p-0 p-5 lg:rounded-none rounded-xl transition-all duration-[2s] ease-in-out`}>
+                <div ref={menuRef} className={`${showMenu? 'flex openmenu':'hidden closemenu'} z-[999] lg:relative lg:top-0 absolute top-16 lg:block flex-col items-center gap-5 bg-white lg:bg-inherit w-full lg:w-auto right-0 left-0 lg:p-0 p-5 lg:rounded-none rounded-xl transition-all duration-[2s] ease-in-out`}>
                     <ul className='flex items-center lg:flex-row flex-col gap-5 '>
                         <li className='cursor-pointer hover:bg-[#FFC734] px-4 py-1 rounded-lg'><a href='/'>Home</a></li>
                         <li className='cursor-pointer hover:bg-[#FFC734] px-4 py-1 rounded-lg'><a href='#services'>Services</a></li>
@@ -29,7 +46,7 @@ export default function Nav() {
                         Book A Free Consultation
                     </button>
                 </div>
-                <div onClick={()=>setShowMenu(!showMenu)} tabIndex={0} onBlur={() => setShowMenu(false)} onChange={() => setShowMenu(false)} className='z-[998] lg:hidden'>
+                <div onClick={()=>setShowMenu(!showMenu)} className='z-[998] lg:hidden'>
                     <FontAwesomeIcon icon={faBars} className='text-2xl mx-2 cursor-pointer hover:text-[#FFB000] transition-colors duration-300' />
                 </div>
             </div>
