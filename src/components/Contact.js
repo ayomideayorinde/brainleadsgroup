@@ -43,10 +43,10 @@ export default function Contact() {
                     <p className="text-gray-600">Whether you have a question about our services, pricing, or anything else, our team is ready to answer all your questions.</p>
                     <p className="text-gray-600">Feel free to reach out via the contact form or contact us directly at:</p>
                     <h3 className="text-xl font-semibold">Contacts Info</h3>
-                    <p className="text-gray-600"><strong><FontAwesomeIcon icon={faEnvelope} className='text-[#FFB000]'/> Email:</strong> <a href="mailto:contact@brainleads.com" className="font-semibold">contact@brainleads.com</a></p>
-                    <p className="text-gray-600"><strong><FontAwesomeIcon icon={faPhone} className='text-[#FFB000]'/> Phone:</strong> <a href="tel:+1234567890" className="font-semibold">+1234567890</a></p>
-                    <p className="text-gray-600"><strong><FontAwesomeIcon icon={faMapLocation} className='text-[#FFB000]'/> Address:</strong> 123 Main St, City, Country</p>
-                    <p className="text-gray-600"><strong><FontAwesomeIcon icon={faClock} className='text-[#FFB000]'/> Hours:</strong> Mon - Fri, 9AM - 6PM</p>
+                    <p className="text-gray-600"><strong><FontAwesomeIcon icon={faEnvelope} className='text-[#FFB000]'/> Email:</strong> <a href="mailto:contact@brainleads.com" className="font-semibold">brainleadsgroup@gmail.com</a></p>
+                    <p className="text-gray-600"><strong><FontAwesomeIcon icon={faPhone} className='text-[#FFB000]'/> Phone:</strong> <a href="tel:+1 204 952 4290" className="font-semibold">+1 204 952 4290</a></p>
+                    <p className="text-gray-600"><strong><FontAwesomeIcon icon={faMapLocation} className='text-[#FFB000]'/> Address:</strong> 63 mckenzie street winnipeg  R2W5N1</p>
+                    <p className="text-gray-600"><strong><FontAwesomeIcon icon={faClock} className='text-[#FFB000]'/> Hours:</strong> Mon - Fri, 9AM - 4PM</p>
 
                 </div>
                 <form 

@@ -24,9 +24,9 @@ export default function Footer() {
       </div>
       <div className="flex flex-col items-center lg:items-start gap-4">
         <h1 className='text-xl font-bold'>Contact Us</h1>
-        <p><FontAwesomeIcon icon={faEnvelope} /> Email: <a href="mailto:contact@brainleads.com" className="primary-fg">contact@brainleads.com</a></p>
-        <p><FontAwesomeIcon icon={faPhone} /> Phone: <a href="tel:+1234567890" className="primary-fg">+1234567890</a></p>
-        <p><FontAwesomeIcon icon={faLocationPin} /> Address: 123 Main St, City, Country</p>
+        <p><FontAwesomeIcon icon={faEnvelope} /> Email: <a href="mailto:contact@brainleads.com" className="primary-fg">brainleadsgroup@gmail.com</a></p>
+        <p><FontAwesomeIcon icon={faPhone} /> Phone: <a href="tel:+1 204 952 4290" className="primary-fg">+1 204 952 4290</a></p>
+        <p><FontAwesomeIcon icon={faLocationPin} /> Address: 63 mckenzie street winnipeg R2W5N1</p>
       </div>
     </footer>
   );
