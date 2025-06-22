@@ -1,8 +1,35 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope, faPhone, faMapLocation, faClock } from '@fortawesome/free-solid-svg-icons'
 //import {  } from '@fortawesome/free-brands-svg-icons'
+import emailjs from '@emailjs/browser';
 
 export default function Contact() {
+
+    const form = useRef();
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs
+        .sendForm(
+            'service_bk0zpsj',     // e.g., service_xxxxx
+            'template_k4ddrmf',    // e.g., template_xxxxx
+            form.current,
+            'iWKvxS1STVD6PeFco'      // e.g., mG8u4Xxxxxxxxx
+        )
+        .then(
+            (result) => {
+            console.log('SUCCESS!', result.text);
+            alert('Message sent successfully!');
+            form.current.reset(); // Optional: clear the form
+            },
+            (error) => {
+            console.log('FAILED...', error.text);
+            alert('Failed to send message.');
+            }
+        );
+    };
+
     return (
         <section className="bg-[#F8F9FC] py-5 lg:px-[50px] px-[25px]" id='contact'>
             <div className="text-center py-8 flex flex-col items-center gap-4">
@@ -21,7 +48,10 @@ export default function Contact() {
                     <p className="text-gray-600"><strong><FontAwesomeIcon icon={faClock} className='text-[#FFB000]'/> Hours:</strong> Mon - Fri, 9AM - 6PM</p>
 
                 </div>
-                <form className="w-full mx-auto bg-[#333333] p-6 rounded-lg shadow-lg">
+                <form 
+                    ref={form}
+                    onSubmit={sendEmail}
+                    className="w-full mx-auto bg-[#333333] p-6 rounded-lg shadow-lg">
                     <div className="mb-4">
                         <label className="block text-white mb-2" htmlFor="name">Name</label>
                         <input type="text" id="name" placeholder="Your name" className="w-full p-3 border border-gray-300 rounded" required />
