@@ -27,7 +27,7 @@ export default function Footer() {
           <h1 className='text-xl font-bold'>Contact Us</h1>
           <p><FontAwesomeIcon icon={faEnvelope} /> Email: <a href="mailto:contact@brainleads.com" className="primary-fg">brainleadsgroup@gmail.com</a></p>
           <p><FontAwesomeIcon icon={faPhone} /> Phone: <a href="tel:+1 204 952 4290" className="primary-fg">+1 204 952 4290</a></p>
-          <p><FontAwesomeIcon icon={faLocationPin} /> Address: 63 mckenzie street winnipeg R2W5N1</p>
+          <p className="text-center lg:text-left"><FontAwesomeIcon icon={faLocationPin} /> Address: 63 mckenzie street winnipeg R2W5N1</p>
         </div>
       </div>
       
