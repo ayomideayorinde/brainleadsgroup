@@ -45,7 +45,7 @@ export default function Contact() {
                     <h3 className="text-xl font-semibold">Contacts Info</h3>
                     <p className="text-gray-600"><strong><FontAwesomeIcon icon={faEnvelope} className='text-[#FFB000]'/> Email:</strong> <a href="mailto:contact@brainleads.com" className="font-semibold">brainleadsgroup@gmail.com</a></p>
                     <p className="text-gray-600"><strong><FontAwesomeIcon icon={faPhone} className='text-[#FFB000]'/> Phone:</strong> <a href="tel:+1 204 952 4290" className="font-semibold">+1 204 952 4290</a></p>
-                    <p className="text-gray-600"><strong><FontAwesomeIcon icon={faMapLocation} className='text-[#FFB000] text-center lg:text-left'/> Address:</strong> 63 mckenzie street winnipeg  R2W5N1</p>
+                    <p className="text-gray-600 text-center lg:text-left"><strong><FontAwesomeIcon icon={faMapLocation} className='text-[#FFB000]'/> Address:</strong> 63 mckenzie street winnipeg  R2W5N1</p>
                     <p className="text-gray-600"><strong><FontAwesomeIcon icon={faClock} className='text-[#FFB000]'/> Hours:</strong> Mon - Fri, 9AM - 4PM</p>
 
                 </div>
