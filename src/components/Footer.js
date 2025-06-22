@@ -1,5 +1,4 @@
 import brainleads from '../assets/brainleads.png';
-import midevision from '../assets/midevision.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope, faPhone, faLocationPin } from '@fortawesome/free-solid-svg-icons'
 //import {  } from '@fortawesome/free-brands-svg-icons'
@@ -31,9 +30,7 @@ export default function Footer() {
           <p><FontAwesomeIcon icon={faLocationPin} /> Address: 63 mckenzie street winnipeg R2W5N1</p>
         </div>
       </div>
-      <div className='flex justify-center items-center text-[15px] py-2 bg-black w-full'>
-        Designed by:&nbsp;&nbsp;<a href='https://wa.me/2348080849040' target='_blank'><img src={midevision} className='w-[100px]' /></a>
-      </div>
+      
     </footer>
   );
 }
