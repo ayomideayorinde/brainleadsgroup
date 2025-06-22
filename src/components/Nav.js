@@ -12,14 +12,18 @@ export default function Nav() {
     // Detect clicks outside the menu to close it
     useEffect(() => {
         const handleClickOutside = (event) => {
-        if (menuRef.current && !menuRef.current.contains(event.target)) {
-            setShowMenu(false)
+            if (menuRef.current && !menuRef.current.contains(event.target)) {
+                setShowMenu(false)
+            }
         }
+        const handleScroll = () => {
+            setShowMenu(false);
         }
-
         document.addEventListener('mousedown', handleClickOutside)
+        window.addEventListener('scroll', handleScroll);
         return () => {
         document.removeEventListener('mousedown', handleClickOutside)
+        window.addEventListener('scroll', handleScroll);
         }
     }, [])
 
