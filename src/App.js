@@ -51,7 +51,7 @@ function App() {
           ${seconds} 
           ${hour >= 12 ? "PM" : "AM"}
 
-          `}&nbsp;
+          `}<br/>
           {
             `
             ${month} ${day}, ${year}
