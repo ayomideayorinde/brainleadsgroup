@@ -26,6 +26,11 @@ function App() {
   
   return (
     <div className="bg-gray-50 text-gray-800 font-sans">
+      <div className="coverScreen">
+        <h1 className="text-white text-center text-[40px]">
+          We’re almost ready to go live.<br/>Something amazing is coming your way! <br/> Stay tuned.
+        </h1>
+      </div>
       <Nav />
       <Hero />
       <Services />
