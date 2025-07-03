@@ -42,26 +42,26 @@ function App() {
   const year = time.getFullYear();
   console.log(month)
   return (
-    <div className="bg-gray-50 text-gray-800 font-sans">
-      <div className="coverScreen">
-        <h1 className="text-black bg-white px-5 py-2 rounded-md text-center text-[40px] mb-5">
-          {`
-          ${hour > 12 ? hour%2 : hour} : 
-          ${minutes} : 
-          ${seconds} 
-          ${hour >= 12 ? "PM" : "AM"}
+    // <div className="bg-gray-50 text-gray-800 font-sans">
+    //   <div className="coverScreen">
+    //     <h1 className="text-black bg-white px-5 py-2 rounded-md text-center text-[40px] mb-5">
+    //       {`
+    //       ${hour > 12 ? hour%2 : hour} : 
+    //       ${minutes} : 
+    //       ${seconds} 
+    //       ${hour >= 12 ? "PM" : "AM"}
 
-          `}&nbsp;
-          {
-            `
-            ${month} ${day}, ${year}
-            `
-          }
-        </h1>
-        <h1 className="text-white text-center text-[40px]">
-          We’re almost ready to go live.<br/>Something amazing is coming your way! <br/> Stay tuned.
-        </h1>
-      </div>
+    //       `}&nbsp;
+    //       {
+    //         `
+    //         ${month} ${day}, ${year}
+    //         `
+    //       }
+    //     </h1>
+    //     <h1 className="text-white text-center text-[40px]">
+    //       We’re almost ready to go live.<br/>Something amazing is coming your way! <br/> Stay tuned.
+    //     </h1>
+    //   </div>
       <Nav />
       <Hero />
       <Services />
