@@ -4,7 +4,14 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      keyframes: {
+        'infinite-scroll': {
+          '0%': { transform: 'translateY(0)' },
+          '100%': { transform: 'translateY(-100%)' },
+        },
+      }
+    },
   },
   plugins: [],
 }
