@@ -66,7 +66,7 @@ code {
 .logo-scroll-container {
   overflow: hidden;
   width: 100%;
-  background-color: bg-[#F8F9FC]; /* optional */
+  background-color: #F8F9FC;
   padding: 1rem 0;
 }
 
@@ -105,3 +105,46 @@ code {
   }
 }
 
+.testi-card:hover p, .testi-card:hover h3{
+  color: white !important;
+}
+
+.testi-scroll-container {
+  overflow: hidden;
+  width: 100%;
+  padding: 1rem 0;
+}
+
+.testi-scroll-track {
+  display: flex;
+  width: max-content;
+  animation: scroll-logos 50s linear infinite;
+}
+
+.testi-scroll-container:hover .testi-scroll-track {
+  animation-play-state: paused;
+}
+
+.testi-row {
+  display: flex;
+}
+
+.testi-row div {
+  width: 400px;
+  margin: 0px 20px;
+  padding: 50px 50px;
+  transition: filter 0.3s;
+}
+
+.testi-row img:hover {
+  filter: grayscale(0%);
+}
+
+@keyframes scroll-logos {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

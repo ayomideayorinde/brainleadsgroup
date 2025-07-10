@@ -12,6 +12,9 @@ import zaloumis from '../assets/partners/zaloumis.jpg';
 
 const partners = [
     {
+        image: thebrick,
+    },
+    {
         image: bowman,
     },
     {
@@ -31,9 +34,6 @@ const partners = [
     },
     {
         image: tcdd,
-    },
-    {
-        image: thebrick,
     },
     {
         image: zaloumis,
