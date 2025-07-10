@@ -37,8 +37,8 @@ function App() {
       <CTA2 />
       <WhyChooseUs />
       <Testimonials />
-      <Contact />
       <Partners />
+      <Contact />
       <Footer />
     </div>
   );

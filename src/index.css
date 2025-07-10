@@ -63,14 +63,45 @@ code {
   }
 }
 
-.coverScreen {
-  height: 100vh;
+.logo-scroll-container {
+  overflow: hidden;
   width: 100%;
-  background-color: black;
-  position: fixed;
-  z-index: 1000;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  background-color: bg-[#F8F9FC]; /* optional */
+  padding: 1rem 0;
 }
+
+.logo-scroll-track {
+  display: flex;
+  width: max-content;
+  animation: scroll-logos 25s linear infinite;
+}
+
+.logo-scroll-container:hover .logo-scroll-track {
+  animation-play-state: paused;
+}
+
+.logo-row {
+  display: flex;
+}
+
+.logo-row img {
+  height: 50px;
+  margin: 0 2rem;
+  object-fit: contain;
+  filter: grayscale(100%);
+  transition: filter 0.3s;
+}
+
+.logo-row img:hover {
+  filter: grayscale(0%);
+}
+
+@keyframes scroll-logos {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
