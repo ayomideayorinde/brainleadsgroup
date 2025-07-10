@@ -47,7 +47,7 @@ export default function Nav() {
                 </div>
                 <div className='z-[999] hidden lg:block'>
                     <button className='primary-bg px-4 py-1 rounded-full font-semibold transition-colors duration-300'>
-                        Book A Free Consultation
+                        <a href='https://calendly.com/brainleadsgroup/30min' target='_blank'>Book A Free Consultation</a>
                     </button>
                 </div>
                 <div onClick={()=>setShowMenu(!showMenu)} className='z-[998] lg:hidden'>
