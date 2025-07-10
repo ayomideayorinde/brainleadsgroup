@@ -5,7 +5,7 @@ import { faStar } from '@fortawesome/free-solid-svg-icons'
 
 const testimonials = [
   {
-    name: "John Doe",
+    name: "John Mary",
     feedback: "Brainleads Group transformed our business with their innovative solutions!",
     rating: faStar
   },
@@ -64,7 +64,7 @@ export default function Testimonials() {
               ))
             }
           </div>
-          <div className='logo-row'>
+          <div className='testi-row'>
             {
               testimonials.map((testimonial, index) => (
                 <div key={index} className="testi-card bg-white p-6 rounded-lg shadow-lg hover:bg-[#333333] hover:shadow-xl transition-shadow duration-300">
