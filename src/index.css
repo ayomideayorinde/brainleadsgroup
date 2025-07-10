@@ -85,7 +85,7 @@ code {
 }
 
 .logo-row img {
-  height: 50px;
+  height: 100px;
   margin: 0 2rem;
   object-fit: contain;
   filter: grayscale(100%);
