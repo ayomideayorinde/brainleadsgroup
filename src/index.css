@@ -136,8 +136,8 @@ code {
   transition: filter 0.3s;
 }
 
-.testi-row img:hover {
-  filter: grayscale(0%);
+.testi-row div:hover {
+  border: 1px solid #ffffff;
 }
 
 @keyframes scroll-logos {
