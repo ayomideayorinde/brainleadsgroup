@@ -28,7 +28,7 @@ export default function Nav() {
     }, [])
 
     return (
-        <section className="fixed z-[999] top-5 left-0 py-2 lg:px-[50px] px-[25px] lg:mx-[50px] mx-[25px] right-0 rounded-full shadow-lg">
+        <section className="absolute z-[999] top-5 left-0 py-2 lg:px-[50px] px-[25px] lg:mx-[50px] mx-[25px] right-0 rounded-full shadow-lg">
             <div className='flex items-center justify-between '>
                 <a href='/' className='flex items-center gap-2 z-[999]'>
                     <img src={logo} className='w-[40px]'/>
