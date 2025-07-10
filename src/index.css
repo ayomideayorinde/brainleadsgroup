@@ -136,6 +136,15 @@ code {
   transition: filter 0.3s;
 }
 
+@media screen and (max-width: 768px) {
+  .testi-row div {
+    width: 250px;
+    margin: 0px 10px;
+    padding: 30px 30px;
+  }
+  
+}
+
 .testi-row div:hover {
   border: 1px solid #ffffff;
 }
