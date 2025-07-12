@@ -28,13 +28,14 @@ export default function Nav() {
     }, [])
 
     return (
-        <section className="absolute z-[999] top-5 left-0 py-2 lg:px-[50px] px-[25px] lg:mx-[50px] mx-[25px] right-0 rounded-full shadow-lg">
+        <section className="py-2 lg:px-[50px] px-[25px] right-0 rounded-full shadow-lg">
+            {/* <section className="absolute z-[999] top-5 left-0 py-2 lg:px-[50px] px-[25px] lg:mx-[50px] mx-[25px] right-0 rounded-full shadow-lg"> */}
             <div className='flex items-center justify-between '>
                 <a href='/' className='flex items-center gap-2 z-[999]'>
                     <img src={logo} className='w-[40px]'/>
                     <div className='flex lg:flex-row flex-col lg:gap-1'>
-                        <p className='my-0 font-semibold'>Brainleads Group</p>
-                        <p className='my-0'>Marketing Firm</p>
+                        <p className=''>Brainleads Group</p>
+                        <p className=''>Marketing Firm</p>
                     </div>
                 </a>
                 <div ref={menuRef} className={`${showMenu? 'flex openmenu':'hidden closemenu'} z-[999] lg:relative lg:top-0 absolute top-16 lg:block flex-col items-center gap-5 bg-white lg:bg-inherit w-full lg:w-auto right-0 left-0 lg:p-0 p-5 lg:rounded-none rounded-xl transition-all duration-[2s] ease-in-out`}>
