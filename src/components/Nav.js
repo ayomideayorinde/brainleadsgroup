@@ -34,8 +34,8 @@ export default function Nav() {
                 <a href='/' className='flex items-center gap-2 z-[999]'>
                     <img src={logo} className='w-[40px]'/>
                     <p className='flex lg:flex-row flex-col'>
-                        <span className='text-xl'><span className='font-bold'>Brainleads</span>Group&nbsp;</span>
-                        <span className='text-lg'>Marketing Firm</span>
+                        <span className='text-xl m-0 p-0 leading-none'><span className='font-bold'>Brainleads</span>Group&nbsp;</span>
+                        <span className='text-lg m-0 p-0 leading-none'>Marketing Firm</span>
                     </p>
                 </a>
                 <div ref={menuRef} className={`${showMenu? 'flex openmenu':'hidden closemenu'} z-[999] lg:relative lg:top-0 absolute top-16 mt-2 lg:mt-0 lg:block flex-col items-center gap-5 bg-white lg:bg-inherit w-full lg:w-auto right-0 left-0 lg:p-0 p-5  transition-all duration-[2s] ease-in-out`}>
