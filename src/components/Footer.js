@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="py-4 px-[25px] lg:px-[50px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
         <div className="flex flex-col items-center lg:items-start gap-4">
           {/* <img src={brainleads} className='w-[60px]'/> */}
-          <h1 class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white via-grey-500 to-[#b9b9b9] py-2">
+          <h1 class="text-center text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white via-grey-500 to-[#b9b9b9] py-2">
             Since Our Founding In 2015
           </h1>
 
