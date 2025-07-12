@@ -5,7 +5,7 @@ import { faFacebook, faInstagram, faXTwitter  } from '@fortawesome/free-brands-s
 
 export default function Footer() {
   return (
-    <footer className="bg-[#333333] text-white pt-4 flex flex-col gap-8">
+    <footer className="bg-[#333333] text-white pt-4 flex flex-col gap-8" id='footer'>
       <div className="py-4 px-[25px] lg:px-[50px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
         <div className="flex flex-col items-center lg:items-start gap-4">
           {/* <img src={brainleads} className='w-[60px]'/> */}
