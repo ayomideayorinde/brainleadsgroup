@@ -38,7 +38,7 @@ export default function Nav() {
                         <p className=''>Marketing Firm</p>
                     </div>
                 </a>
-                <div ref={menuRef} className={`${showMenu? 'flex openmenu':'hidden closemenu'} z-[999] lg:relative lg:top-0 absolute top-[30px] lg:block flex-col items-center gap-5 bg-white lg:bg-inherit w-full lg:w-auto right-0 left-0 lg:p-0 p-5  transition-all duration-[2s] ease-in-out`}>
+                <div ref={menuRef} className={`${showMenu? 'flex openmenu':'hidden closemenu'} z-[999] lg:relative lg:top-0 absolute top-[40px] lg:block flex-col items-center gap-5 bg-white lg:bg-inherit w-full lg:w-auto right-0 left-0 lg:p-0 p-5  transition-all duration-[2s] ease-in-out`}>
                     <ul className='flex items-center lg:flex-row flex-col gap-5 '>
                         <li className='cursor-pointer hover:bg-[#FFC734] px-4 py-1 rounded-lg'><a href='/'>Home</a></li>
                         <li className='cursor-pointer hover:bg-[#FFC734] px-4 py-1 rounded-lg'><a href='#services'>Services</a></li>
