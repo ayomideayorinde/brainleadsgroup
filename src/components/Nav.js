@@ -33,10 +33,10 @@ export default function Nav() {
             <div className='flex items-center justify-between '>
                 <a href='/' className='flex items-center gap-2 z-[999]'>
                     <img src={logo} className='w-[40px]'/>
-                    <div className='flex lg:flex-row flex-col lg:gap-1'>
-                        <p className=''>Brainleads Group</p>
-                        <p className=''>Marketing Firm</p>
-                    </div>
+                    <p className='flex lg:flex-row flex-col'>
+                        <span className='text-xl'><span className='font-bold'>Brainleads</span>Group&nbsp;</span>
+                        <span className='text-lg'>Marketing Firm</span>
+                    </p>
                 </a>
                 <div ref={menuRef} className={`${showMenu? 'flex openmenu':'hidden closemenu'} z-[999] lg:relative lg:top-0 absolute top-16 mt-2 lg:mt-0 lg:block flex-col items-center gap-5 bg-white lg:bg-inherit w-full lg:w-auto right-0 left-0 lg:p-0 p-5  transition-all duration-[2s] ease-in-out`}>
                     <ul className='flex items-center lg:flex-row flex-col gap-5 '>
