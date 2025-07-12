@@ -28,7 +28,7 @@ export default function Nav() {
     }, [])
 
     return (
-        <section className="py-2 lg:px-[50px] px-[25px] right-0">
+        <section className="z-[999] absolute top-0 left-0 py-2 lg:px-[50px] px-[25px] right-0 rounded-0 bg-white">
             {/* <section className="absolute z-[999] top-5 left-0 py-2 lg:px-[50px] px-[25px] lg:mx-[50px] mx-[25px] right-0 rounded-full shadow-lg"> */}
             <div className='flex items-center justify-between '>
                 <a href='/' className='flex items-center gap-2 z-[999]'>
