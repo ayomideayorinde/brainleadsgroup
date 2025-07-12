@@ -23,6 +23,13 @@ code {
 .primary-bg:hover {
   background-color: #FFB000;
 }
+.myHover {
+  color: snow;
+}
+.myHover:hover {
+  color: #FFC734;
+  transition: color 0.3s ease-in-out;
+}
 .primary-fg {
   color: #FFC734;
 }

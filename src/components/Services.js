@@ -3,8 +3,8 @@ import { faNetworkWired, faChartColumn, faCalendar, faDashboard, faVideoCamera }
 // import { faBar } from '@fortawesome/free-brands-svg-icons'
 
 const serviceCard = [
-  {icon:faVideoCamera, title:'Content Video Production', 
-   desc:'With our production experts, we produce high-quality video content specifically designed for monetization and sales conversion.'},
+  {icon:faVideoCamera, title:'Ads Video Production', 
+   desc:'Strategic video campaigns designed to convert. We produce high-impact video campaigns that deliver real, trackable sales results.'},
   {icon:faChartColumn, title:'Media Strategy & Planning', 
    desc:'Informed by data-driven audience insights, we curate the best strategic plan for both your brand, and your audience.'},
   {icon:faNetworkWired, title:'Full-Funnel Media Activation', 
