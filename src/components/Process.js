@@ -3,7 +3,8 @@ const steps = [
   {step: 'Step 2', title: 'RESEARCH', icon: '📊'},
   {step: 'Step 3', title: 'STRATEGY', icon: '🧠'},
   {step: 'Step 4', title: 'EXECUTION', icon: '🚀'},
-  {step: 'Step 5', title: 'OPTIMIZE', icon: '📈'}
+  {step: 'Step 5', title: 'OPTIMIZE', icon: '📈'},
+  {step: 'Step 6', title: 'CONVERSION', icon: '💰'},
 ]
 
 export default function Process() {
@@ -17,7 +18,7 @@ export default function Process() {
           Every brand is different. So we apply a structured, customized approach to make sure your business gets the results it deserves.
         </p>
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-0 p-6 px-[25px] lg:px-[50px]">
+      <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-6 gap-0 p-6 px-[25px] lg:px-[50px]">
         {steps.map((step, index) => (
           <div key={index} className="flex flex-col items-center justify-center rounded-lg py-2 hover:shadow-2xl transition-shadow duration-300 card-bg" data-aos="fade-up" data-aos-delay={index * 200}>
             <div className="mb-2">

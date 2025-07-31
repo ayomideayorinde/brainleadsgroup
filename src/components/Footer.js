@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="py-4 px-[25px] lg:px-[50px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
         <div className="flex flex-col items-center lg:items-start gap-4">
           {/* <img src={brainleads} className='w-[60px]'/> */}
-          <h1 class="text-center text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white via-grey-500 to-[#b9b9b9] py-2">
+          <h1 class="text-center text-3xl font-bold text-[#FFB000]">
             Since Our Founding In 2015
           </h1>
 
@@ -21,14 +21,11 @@ export default function Footer() {
             Whether you're a solo entrepreneur or a major financial institution, we seamlessly integrate with your existing marketing efforts or act as your dedicated agency partner for all your marketing and advertising needs.
           </p>
           <div className='flex items-center gap-2'>
-            <a href="https://www.facebook.com/brainleadsgroup" target="_blank" rel="noopener noreferrer" className="text-2xl text-white hover:text-[#FFC734] transition-colors duration-300">
+            <a href="https://www.facebook.com/share/16kaSzKyjP/" target="_blank" rel="noopener noreferrer" className="text-2xl text-[#FFC734] hover:text-white transition-colors duration-300">
               <FontAwesomeIcon icon={faFacebook} />
             </a>
-            <a href="https://www.instagram.com/brainleadsgroup" target="_blank" rel="noopener noreferrer" className="text-2xl text-white hover:text-[#FFC734] transition-colors duration-300">
+            <a href="https://www.instagram.com/brainleadsgroup" target="_blank" rel="noopener noreferrer" className="text-2xl text-[#FFC734] hover:text-white transition-colors duration-300">
               <FontAwesomeIcon icon={faInstagram} />
-            </a>
-            <a href="https://www.x.com/brainleadsgroup" target="_blank" rel="noopener noreferrer" className="text-2xl text-white hover:text-[#FFC734] transition-colors duration-300">
-              <FontAwesomeIcon icon={faXTwitter} />
             </a>
           </div>
         </div>
