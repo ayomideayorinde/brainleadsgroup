@@ -45,7 +45,7 @@ export default function Footer() {
           <p className="text-center lg:text-left"><FontAwesomeIcon icon={faLocationPin} /> Address: 63 mckenzie street winnipeg R2W5N1</p>
         </div> */}
       </div>
-      <div>
+      <div className="flex justify-center py-4">
         <p className="text-center text-sm text-gray-400">&copy; 2025 Brainleads Group. All rights reserved.</p>
       </div>
     </footer>
