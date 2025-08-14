@@ -35,7 +35,7 @@ export default function Contact() {
         <section className="bg-[#F8F9FC] py-5 lg:px-[50px] px-[25px]" id='contact'>
             <div className="text-center py-8 flex flex-col items-center gap-4">
                 <h1 className="text-[32px] lg:text-[40px] font-bold">Get In Touch</h1>
-                <h2 className='text-2xl primary-fg bg-[#333333] px-5 py-1 text-center rounded-full'>Contact Us</h2>
+                {/* <h2 className='text-2xl primary-fg bg-[#333333] px-5 py-1 text-center rounded-full'>Contact Us</h2> */}
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 py-6">
                 <div className="flex flex-col items-center lg:items-start gap-4 mb-6">

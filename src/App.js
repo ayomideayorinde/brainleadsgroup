@@ -29,16 +29,16 @@ function App() {
     <div className="bg-gray-50 text-gray-800 font-sans">
       <Nav />
       <Hero />
-      <Services />
-      <CTA />
-      <Benefits />
-      <Results />
       <Process />
-      <CTA2 />
+      <Services />
       <WhyChooseUs />
       <Testimonials />
-      <Contact />
+      <Benefits />
+      <Results />
       <Partners />
+      {/* <CTA /> */}
+      <CTA2 />
+      <Contact />
       <Footer />
     </div>
   );

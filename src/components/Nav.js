@@ -43,12 +43,12 @@ export default function Nav() {
                         <li className='cursor-pointer hover:bg-[#FFC734] px-4 py-1 rounded-lg'><a href='#contact'>Contact</a></li>
                     </ul>
                     <button className='lg:hidden primary-bg px-4 py-1 rounded-full font-semibold transition-colors duration-300'>
-                        <a href='https://calendly.com/brainleadsgroup/30min' target='_blank'>Book A Free Consultation</a>
+                        <a href='https://calendly.com/brainleadsgroup/tailor-marketing-insight-for-your-business' target='_blank'>Book A Free Consultation</a>
                     </button>
                 </div>
                 <div className='z-[999] hidden lg:block'>
                     <button className='primary-bg px-4 py-1 rounded-full font-semibold transition-colors duration-300'>
-                        <a href='https://calendly.com/brainleadsgroup/30min' target='_blank'>Book A Free Consultation</a>
+                        <a href='https://calendly.com/brainleadsgroup/tailor-marketing-insight-for-your-business' target='_blank'>Book A Free Consultation</a>
                     </button>
                 </div>
                 <div onClick={()=>setShowMenu(!showMenu)} className='z-[998] lg:hidden'>

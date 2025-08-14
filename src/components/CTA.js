@@ -9,7 +9,7 @@ export default function CTA() {
         <p className="text-center text-white text-[18px] lg:text-[20px] font-normal">
           We create a strategy that binds you up with your target audience, driving not just traffic flow but conversions.
         </p>
-        <button className='rounded-full font-bold primary-bg px-5 py-3'><a href='https://calendly.com/brainleadsgroup/30min' target='_blank'>Book A Free Consultation</a></button>
+        <button className='rounded-full font-bold primary-bg px-5 py-3'><a href='https://calendly.com/brainleadsgroup/30min' target='_blank'>Book Your Free Strategy Call Now</a></button>
       </div>
     </section>
   );

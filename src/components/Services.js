@@ -4,23 +4,24 @@ import { faNetworkWired, faChartColumn, faCalendar, faDashboard, faVideoCamera }
 
 const serviceCard = [
   {icon:faVideoCamera, title:'Ads Video Production', 
-   desc:'Strategic video campaigns designed to convert. We produce high-impact video campaigns that deliver real, trackable sales results.'},
+   desc:'High-impact video ads that grab attention, tell your story, and drive measurable sales results.'},
   {icon:faChartColumn, title:'Media Strategy & Planning', 
-   desc:'Informed by data-driven audience insights, we curate the best strategic plan for both your brand, and your audience.'},
+   desc:'Data-backed media plans that put your brand in front of the right people, at the right time, for the best ROI possible.'},
   {icon:faNetworkWired, title:'Full-Funnel Media Activation', 
-   desc:'Activating across the media of today and tomorrow, we adapt to the ever-changing behaviors of people with tactics designed to drive connection with your customers.'},
+   desc:'We engage your audience at every stage — from awareness to purchase — with tactics proven to drive conversions.'},
   {icon:faCalendar, title:'Media Operations', 
-  desc:"Crossing the t's and dotting the i's, our project management and ad operations teams ensure smooth execution from onboarding to campaign wrap-up and everything in between."},
+  desc:"We handle every detail from onboarding to campaign wrap-up, ensuring smooth execution and zero wasted ad spend."},
   {icon:faDashboard, title:'Data, Analytics & Technology', 
-   desc:'Collaboratively built dashboards mean that you have access to clear campaign reporting every step of the way, because we know transparency matters.'}
+   desc:'Custom dashboards give you full transparency on what’s working and what needs adjusting.'}
 ]
 
 export default function Services() {
   return (
-    <section className="bg-[#F8F9FC]  py-5 lg:px-[50px]" id='services'>
+    <section className="service-bg  py-5 lg:px-[50px]" id='services'>
       <div className="text-center py-8 flex flex-col items-center gap-4 px-[25px] ">
-        <h1 className="text-[32px] lg:text-[40px] font-bold">Comprehensive Marketing Strategy</h1>
-        <h2 className='text-2xl primary-fg bg-[#333333] px-5 py-1 text-center rounded-full'>What We Offer</h2>
+        {/* <h1 className="text-[32px] lg:text-[40px] font-bold">Comprehensive Marketing Strategy</h1> */}
+        <h1 className="text-[32px] lg:text-[40px] font-bold text-white">Our Services</h1>
+        {/* <h2 className='text-2xl primary-fg bg-[#333333] px-5 py-1 text-center rounded-full'>Our Services</h2> */}
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
         {serviceCard.map((service, index) => (

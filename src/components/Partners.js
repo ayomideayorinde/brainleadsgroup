@@ -42,7 +42,7 @@ const partners = [
 
 export default function Partners() {
     return (
-        <section className="bg-[#F8F9FC] Partners py-2 lg:px-[50px] px-[25px] lg:mx-[50px] mx-[25px]">
+        <section className="bg-[#F8F9FC] Partners py-5 lg:px-[50px] px-[25px] lg:mx-[50px] mx-[25px]">
             <div className="flex flex-col items-center justify-center">
                 <h2 className="text-3xl font-bold mb-4">Our Partners</h2>
                 <p className="text-lg text-center mb-8">We collaborate with leading companies to deliver exceptional services.</p>

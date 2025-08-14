@@ -1,6 +1,6 @@
-import brainleads from '../assets/brainleads.png';
+// import brainleads from '../assets/brainleads.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope, faPhone, faLocationPin } from '@fortawesome/free-solid-svg-icons'
+// import { faEnvelope, faPhone, faLocationPin } from '@fortawesome/free-solid-svg-icons'
 import { faFacebook, faInstagram, faXTwitter  } from '@fortawesome/free-brands-svg-icons'
 
 export default function Footer() {
@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="flex flex-col items-center lg:items-start gap-4">
           {/* <img src={brainleads} className='w-[60px]'/> */}
           <h1 class="text-center text-3xl font-bold text-[#FFB000]">
-            Since Our Founding In 2015
+            Since Our Founding On 2015
           </h1>
 
           <p className='lg:text-justify text-center'>
@@ -45,8 +45,8 @@ export default function Footer() {
           <p className="text-center lg:text-left"><FontAwesomeIcon icon={faLocationPin} /> Address: 63 mckenzie street winnipeg R2W5N1</p>
         </div> */}
       </div>
-      <div className="flex justify-center py-4">
-        <p className="text-center text-sm text-gray-400">&copy; 2025 Brainleads Group. All rights reserved.</p>
+      <div className="flex justify-center py-4 bg-white">
+        <p className="text-center text-sm text-[#333333]">&copy; 2025 Brainleads Group. All rights reserved.</p>
       </div>
     </footer>
   );
