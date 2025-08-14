@@ -6,7 +6,7 @@ const features = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="bg-[#F8F9FC]  py-5 lg:px-[50px]" id='services'>
+    <section className="bg-[#F8F9FC]  py-5 lg:px-[50px]" id='values'>
           <div className="text-center py-8 flex flex-col items-center gap-4 px-[25px] ">
             {/* <h1 className="text-[32px] lg:text-[40px] font-bold">Comprehensive Marketing Strategy</h1> */}
             <h1 className="text-[32px] lg:text-[40px] font-bold">Our Values</h1>

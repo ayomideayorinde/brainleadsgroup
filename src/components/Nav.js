@@ -39,6 +39,7 @@ export default function Nav() {
                         <li className='cursor-pointer hover:bg-[#FFC734] px-4 py-1 rounded-lg'><a href='/'>Home</a></li>
                         <li className='cursor-pointer hover:bg-[#FFC734] px-4 py-1 rounded-lg'><a href='#footer'>About</a></li>
                         <li className='cursor-pointer hover:bg-[#FFC734] px-4 py-1 rounded-lg'><a href='#services'>Services</a></li>
+                        <li className='cursor-pointer hover:bg-[#FFC734] px-4 py-1 rounded-lg'><a href='#values'>Our Values</a></li>
                         <li className='cursor-pointer hover:bg-[#FFC734] px-4 py-1 rounded-lg'><a href='#benefits'>Benefits</a></li>
                         <li className='cursor-pointer hover:bg-[#FFC734] px-4 py-1 rounded-lg'><a href='#contact'>Contact</a></li>
                     </ul>
