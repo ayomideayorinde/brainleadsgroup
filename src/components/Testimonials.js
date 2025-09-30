@@ -7,33 +7,27 @@ const testimonials = [
   {
     name: "Bob Brown",
     feedback:
-      "Within 3 months, Brain Leads Group increased our qualified leads by 42% and boosted our online sales by 30%.",
+      "Brainleads Group tripled our revenue in 6 months!",
     rating: fivestar,
   },
   {
     name: "Eve Wilson",
     feedback:
-      "The video ads they created became our top-performing campaign of the year.",
+      "Their storytelling campaigns made our brand unforgettable.",
     rating: fivestar,
   },
   {
     name: "Charlie Davis",
     feedback:
-      "Their expertise in digital marketing is unmatched. We saw a significant increase in our online presence.",
+      "A professional team that delivers results every time.",
     rating: fourdotfivestar,
-  },
-  {
-    name: "David Lee",
-    feedback:
-      "We were impressed with their strategic approach and attention to detail. Our project was a success!",
-    rating: fivestar,
   },
 ];
 
 export default function Testimonials() {
   const [index, setIndex] = useState(0);
 
-  // Auto-rotate every 5s
+  
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % testimonials.length);
@@ -46,7 +40,7 @@ export default function Testimonials() {
       className="relative bg-gradient-to-r from-[#1a1a1a] via-[#333333] to-[#1a1a1a] py-16 lg:px-[50px] px-[25px] text-white overflow-hidden"
       id="testimonials"
     >
-      {/* Accent background animation */}
+      
       <motion.div
         className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#FFB000] to-[#FF5C00] opacity-20 blur-3xl"
         animate={{ x: ["0%", "20%", "0%"], y: ["0%", "10%", "0%"] }}
@@ -83,7 +77,7 @@ export default function Testimonials() {
         </AnimatePresence>
       </div>
 
-      {/* Dots navigation */}
+      
       <div className="flex justify-center mt-8 gap-3 relative z-10">
         {testimonials.map((_, i) => (
           <button

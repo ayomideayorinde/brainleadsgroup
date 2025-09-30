@@ -1,83 +1,83 @@
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
+import { motion } from "framer-motion";
 
-const features = [
-  { icon: "✔️", title: "Transparency", desc: "You see exactly what we do and the results we deliver." },
-  { icon: "⚡", title: "Agility", desc: "We adapt fast to market changes and trends." },
-  { icon: "📈", title: "Impact", desc: "Every campaign is designed to produce measurable growth." },
-];
-
-
-const headingVariant = {
-  hidden: { opacity: 0, y: -18 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } },
+const listVariants = {
+  hidden: { opacity: 0, x: -40 },
+  visible: (i) => ({
+    opacity: 1,
+    x: 0,
+    transition: { delay: i * 0.2, duration: 0.7, ease: "easeOut" },
+  }),
 };
 
-const containerVariant = {
-  hidden: {},
-  visible: { transition: { staggerChildren: 0.18, delayChildren: 0.12 } },
-};
-
-const cardVariant = {
-  hidden: { opacity: 0, y: 18, scale: 0.985 },
-  visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.55, ease: "easeOut" } },
-};
-
-export default function WhyChooseUs() {
-  const reduce = useReducedMotion();
+export default function WhyChooseBrainleads() {
+  const points = [
+    "Creative campaigns that tell your story",
+    "Distribution strategies that make your brand unmissable",
+    "Proven sales strategies to triple revenue",
+    "Lead generation & retention systems for long-term growth",
+    "Franchise growth expertise to expand nationwide",
+  ];
 
   return (
-    <section className="relative overflow-hidden bg-[#F8F9FC] py-12 lg:px-[50px]" id="values" aria-labelledby="values-heading">
+    <section className="relative w-full min-h-screen flex flex-col lg:flex-row items-center justify-center bg-gradient-to-br from-black via-gray-900 to-gray-800 text-white overflow-hidden px-[25px] lg:px-[80px] py-16">
       
-      <div aria-hidden className="absolute inset-0 -z-10 pointer-events-none">
-        <div className="absolute -left-10 top-8 w-[280px] h-[280px] rounded-full bg-gradient-to-tr from-purple-500 via-pink-400 to-yellow-300 opacity-20 blur-3xl transform animate-floatGradient hidden sm:block" />
-        <div className="absolute right-6 -bottom-6 w-[220px] h-[220px] rounded-full bg-gradient-to-br from-cyan-400 via-blue-500 to-indigo-600 opacity-16 blur-3xl transform animate-floatGradientSlow hidden md:block" />
+      <div className="flex-1 relative z-10 text-left lg:pr-12">
+        <motion.h2
+          className="text-[32px] lg:text-[42px] font-bold leading-tight mb-8"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          Your Brand <span className="primary-fg">Deserves to Lead</span>
+        </motion.h2>
+
+        <div className="space-y-5 mb-10">
+          {points.map((point, i) => (
+            <motion.div
+              key={i}
+              custom={i}
+              variants={listVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              className="flex items-start gap-3"
+            >
+              <span className="primary-fg text-2xl">&#10004;&#xFE0E;</span>
+              <p className="text-lg lg:text-xl text-gray-300">{point}</p>
+            </motion.div>
+          ))}
+        </div>
+
+        <motion.a
+          href="#contact"
+          className="inline-block px-8 py-3 rounded-full text-white font-semibold text-lg primary-bg shadow-lg hover:shadow-xl transition-shadow"
+          whileHover={{ scale: 1.07 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          Contact Us Today
+        </motion.a>
       </div>
 
       
-      <motion.div
-        id="values-heading"
-        className="text-center flex flex-col items-center gap-4 px-[20px] mb-8"
-        initial={reduce ? undefined : "hidden"}
-        whileInView={reduce ? undefined : "visible"}
-        viewport={{ once: true, amount: 0.3 }}
-        variants={headingVariant}
-      >
-        <h2 className="text-[28px] md:text-[36px] lg:text-[40px] font-bold">Our Values</h2>
-        <p className="text-gray-600 text-[18px] lg:text-[20px]">
-          The principles that guide everything we do—strategy, execution and continuous improvement.
-        </p>
-      </motion.div>
-
-      
-      <motion.div
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-6 md:px-8 lg:px-12"
-        variants={containerVariant}
-        initial={reduce ? undefined : "hidden"}
-        whileInView={reduce ? undefined : "visible"}
-        viewport={{ once: true, amount: 0.2 }}
-      >
-        {features.map((feature, i) => (
-          <motion.article
-            key={i}
-            className="bg-white p-5 md:p-6 rounded-lg shadow-sm flex items-start gap-4 hover:shadow-lg transition-shadow duration-300"
-            variants={cardVariant}
-            whileHover={reduce ? undefined : { y: -6, scale: 1.02 }}
-            role="article"
-            aria-label={`${feature.title} — ${feature.desc}`}
-          >
-            <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-br from-[#FFB000]/10 to-[#FFB000]/5 text-2xl md:text-3xl">
-              <span aria-hidden>{feature.icon}</span>
-            </div>
-
-            <div>
-              <h3 className="text-lg md:text-xl font-semibold mb-1">{feature.title}</h3>
-              <p className="text-sm md:text-base text-gray-600">{feature.desc}</p>
-            </div>
-          </motion.article>
-        ))}
-      </motion.div>
+      <div className="flex-1 flex items-center justify-center relative mt-12 lg:mt-0">
+        <motion.div
+          className="w-[320px] h-[320px] rounded-full bg-gradient-to-tr from-yellow-400 to-orange-400 opacity-80 blur-2xl absolute"
+          animate={{ scale: [1, 1.2, 1], rotate: [0, 20, 0] }}
+          transition={{ repeat: Infinity, duration: 10, ease: "easeInOut" }}
+        />
+        <motion.img
+          src="/images/why-us-visual.png"
+          alt="Why Choose Brainleads"
+          className="relative w-[280px] lg:w-[380px] rounded-xl shadow-2xl z-10"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+        />
+      </div>
     </section>
   );
 }

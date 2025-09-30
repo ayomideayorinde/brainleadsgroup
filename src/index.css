@@ -22,6 +22,7 @@ code {
 }
 .primary-bg:hover {
   background-color: #FFB000;
+  color: white;
 }
 .myHover {
   color: snow;

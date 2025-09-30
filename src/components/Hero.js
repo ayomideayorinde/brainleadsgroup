@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 
-
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -11,70 +10,62 @@ const containerVariants = {
   },
 };
 
-const itemVariants = {
-  hidden: { opacity: 0, y: 40 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.8, ease: "easeOut" },
-  },
+const fadeUp = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 1, ease: "easeOut" } },
 };
 
 export default function Hero() {
   return (
-    <section className="relative w-full h-screen overflow-hidden bg-cover bg-center">
+    <section className="relative w-full h-screen overflow-hidden">
       
-      <motion.div
-        className="absolute inset-0"
-        style={{ backgroundImage: `url('/images/heroimg.jpg')`, backgroundSize: "cover", backgroundPosition: "center" }}
-        initial={{ scale: 1.1 }}
-        animate={{ scale: 1 }}
-        transition={{ duration: 10, ease: "easeOut" }}
+      <video
+        className="absolute inset-0 w-full h-full object-cover"
+        src="/videos/hero-vid-bg.mp4"
+        autoPlay
+        loop
+        muted
+        playsInline
       />
 
       <motion.div
-        className="bg-black w-full h-full absolute z-10 top-0 right-0 left-0"
+        className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80"
         initial={{ opacity: 0 }}
-        animate={{ opacity: 0.5 }}
-        transition={{ duration: 1 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1.2 }}
       />
 
       <motion.div
-        className="w-full flex flex-col items-center gap-[20px] lg:px-[150px] px-[50px] absolute z-20 top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-white text-center"
+        className="relative z-20 w-full h-full flex flex-col items-center justify-center text-center px-6 lg:px-24 text-white"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
       >
-        <motion.p
-          variants={itemVariants}
-          className="text-[32px] lg:text-[40px] font-bold capitalize"
+        <motion.h1
+          variants={fadeUp}
+          className="text-4xl lg:text-6xl font-extrabold leading-tight mb-6"
         >
-          Rise above the noise.{" "}
-          <span className="primary-fg">Turn Clicks Into Customers.</span>
-        </motion.p>
+          Your Brand, Unstoppable 
+        </motion.h1>
 
         <motion.p
-          variants={itemVariants}
-          className="text-[18px] lg:text-[20px]"
+          variants={fadeUp}
+          className="max-w-2xl text-[18px] lg:text-[20px] mb-10 text-gray-200"
         >
-          Your business deserves to prosper. Whether local or global, we create
-          your path through digital marketing.
+          We tell your story, amplify your reach, and grow your revenue with creative campaigns, strategic marketing, and franchise expansion solutions.
         </motion.p>
 
-        <motion.button
-          variants={itemVariants}
-          whileHover={{ scale: 1.05 }}
+        <motion.a
+          href="https://calendly.com/brainleadsgroup/tailor-marketing-insight-for-your-business"
+          target="_blank"
+          rel="noopener noreferrer"
+          variants={fadeUp}
+          whileHover={{ scale: 1.05, boxShadow: "0px 0px 20px rgba(255,255,255,0.6)" }}
           whileTap={{ scale: 0.95 }}
-          className="rounded-full font-bold primary-bg px-5 py-3 mt-5 lg:mt-auto"
+          className="inline-block rounded-full primary-bg px-8 py-4 font-bold text-lg transition"
         >
-          <a
-            href="https://calendly.com/brainleadsgroup/tailor-marketing-insight-for-your-business"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Book Your Free Strategy Call Now
-          </a>
-        </motion.button>
+          Get Your Free Brand Growth Consultation
+        </motion.a>
       </motion.div>
     </section>
   );
