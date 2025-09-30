@@ -21,7 +21,7 @@ export default function WhyChooseBrainleads() {
   ];
 
   return (
-    <section className="relative w-full min-h-screen flex flex-col lg:flex-row items-center justify-center bg-gradient-to-br from-black via-gray-900 to-gray-800 text-white overflow-hidden px-[25px] lg:px-[80px] py-16">
+    <section className="relative w-full lg:min-h-screen flex flex-col lg:flex-row items-center justify-center bg-gradient-to-br from-black via-gray-900 to-gray-800 text-white overflow-hidden px-[25px] lg:px-[80px] py-16">
       
       <div className="flex-1 relative z-10 text-left lg:pr-12">
         <motion.h2
@@ -62,7 +62,7 @@ export default function WhyChooseBrainleads() {
       </div>
 
       
-      <div className="flex-1 flex items-center justify-center relative mt-12 lg:mt-0">
+      <div className="flex-1 lg:flex hidden items-center justify-center relative mt-12 lg:mt-0">
         <motion.div
           className="w-[320px] h-[320px] rounded-full bg-gradient-to-tr from-yellow-400 to-orange-400 opacity-80 blur-2xl absolute"
           animate={{ scale: [1, 1.2, 1], rotate: [0, 20, 0] }}
