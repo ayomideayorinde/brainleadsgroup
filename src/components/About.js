@@ -25,9 +25,9 @@ export default function AboutUs() {
       id="about"
       className="relative w-full py-20 px-6 lg:px-32 bg-[#111] text-white overflow-hidden"
     >
-        
+        {/* bg-gradient-to-br from-black via-gray-900 to-gray-800 */}
       <motion.div
-        className="absolute -top-20 -left-20 w-[300px] h-[300px] rounded-full bg-gradient-to-r from-pink-500 via-purple-600 to-blue-500 opacity-30 blur-3xl"
+        className="absolute -top-20 -left-20 w-[300px] h-[300px] rounded-full bg-gradient-to-r from-red-500 via-yellow-400 to-orange-500 opacity-30 blur-3xl"
         animate={{ x: [0, 30, -30, 0], y: [0, -30, 30, 0] }}
         transition={{ repeat: Infinity, duration: 12, ease: "easeInOut" }}
       />

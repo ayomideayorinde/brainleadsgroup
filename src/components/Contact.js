@@ -1,75 +1,143 @@
+"use client";
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope, faPhone, faMapLocation, faClock } from '@fortawesome/free-solid-svg-icons'
-//import {  } from '@fortawesome/free-brands-svg-icons'
+import { faEnvelope, faPhone, faMapLocation } from '@fortawesome/free-solid-svg-icons'
 import { useRef } from 'react';
+import { motion } from "framer-motion";
 import emailjs from '@emailjs/browser';
 
 export default function Contact() {
+  const form = useRef();
 
-    const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        'service_bk0zpsj',     // your service ID
+        'template_k4ddrmf',    // your template ID
+        form.current,
+        'iWKvxS1STVD6PeFco'    // your public key
+      )
+      .then(
+        (result) => {
+          console.log('SUCCESS!', result.text);
+          alert('Message sent successfully!');
+          form.current.reset();
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+          alert('Failed to send message.');
+        }
+      );
+  };
 
-    const sendEmail = (e) => {
-        e.preventDefault();
+  return (
+    <section
+      className="relative bg-[#F8F9FC] py-16 px-6 lg:px-[80px] overflow-hidden"
+      id="contact"
+    >
+      {/* floating gradient accent background */}
+      <motion.div
+        className="absolute -top-20 -right-20 w-[300px] h-[300px] rounded-full bg-gradient-to-r from-[#FFB000] to-[#FFC734] opacity-30 blur-3xl"
+        animate={{ y: [0, 30, 0], x: [0, -30, 0] }}
+        transition={{ repeat: Infinity, duration: 10, ease: "easeInOut" }}
+      />
+      <motion.div
+        className="absolute -bottom-20 -left-20 w-[250px] h-[250px] rounded-full bg-gradient-to-r from-[#333333] to-[#666666] opacity-20 blur-2xl"
+        animate={{ y: [0, -40, 0], x: [0, 40, 0] }}
+        transition={{ repeat: Infinity, duration: 12, ease: "easeInOut" }}
+      />
 
-        emailjs
-        .sendForm(
-            'service_bk0zpsj',     // e.g., service_xxxxx
-            'template_k4ddrmf',    // e.g., template_xxxxx
-            form.current,
-            'iWKvxS1STVD6PeFco'      // e.g., mG8u4Xxxxxxxxx
-        )
-        .then(
-            (result) => {
-            console.log('SUCCESS!', result.text);
-            alert('Message sent successfully!');
-            form.current.reset(); // Optional: clear the form
-            },
-            (error) => {
-            console.log('FAILED...', error.text);
-            alert('Failed to send message.');
-            }
-        );
-    };
+      {/* header */}
+      <div className="relative text-center mb-12">
+        <motion.h1
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-[32px] lg:text-[42px] font-bold text-gray-900"
+        >
+          Ready to Grow Your Brand, Revenue, and Franchise?
+        </motion.h1>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: 0.8 }}
+          className="text-gray-600 mt-3 text-lg"
+        >
+          Fill out the form or schedule a call to start transforming your brand today.
+        </motion.p>
+      </div>
 
-    return (
-        <section className="bg-[#F8F9FC] py-5 lg:px-[50px] px-[25px]" id='contact'>
-            <div className="text-center py-8 flex flex-col items-center gap-4">
-                <h1 className="text-[32px] lg:text-[40px] font-bold">Get In Touch</h1>
-                {/* <h2 className='text-2xl primary-fg bg-[#333333] px-5 py-1 text-center rounded-full'>Contact Us</h2> */}
+      {/* main content */}
+      <div className="relative grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+        
+        {/* Contact Info */}
+        <motion.div
+          initial={{ opacity: 0, x: -40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          className="flex flex-col justify-center gap-6 bg-white p-8 rounded-2xl shadow-lg"
+        >
+          <h3 className="text-2xl font-semibold text-gray-900">Quick Contact</h3>
+          <p className="text-gray-600 flex items-center gap-3">
+            <FontAwesomeIcon icon={faPhone} className="text-[#FFB000]" /> 
+            <a href="tel:+12049524290" className="font-medium hover:text-[#FFB000]">
+              +1 204-952-4290
+            </a>
+          </p>
+          <p className="text-gray-600 flex items-center gap-3">
+            <FontAwesomeIcon icon={faEnvelope} className="text-[#FFB000]" /> 
+            <a href="mailto:brainleadsgroup@gmail.com" className="font-medium hover:text-[#FFB000]">
+              brainleadsgroup@gmail.com
+            </a>
+          </p>
+          <p className="text-gray-600 flex items-center gap-3">
+            <FontAwesomeIcon icon={faMapLocation} className="text-[#FFB000]" /> 
+            242 Hargrave St, Winnipeg, MB R3C 0T8
+          </p>
+        </motion.div>
+
+        {/* Contact Form */}
+        <motion.form
+          ref={form}
+          onSubmit={sendEmail}
+          initial={{ opacity: 0, x: 40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          className="bg-[#333333] p-8 rounded-2xl shadow-lg w-full"
+        >
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+            <div>
+              <label className="block text-white mb-2" htmlFor="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" className="w-full p-3 rounded-md border border-gray-400" required />
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 py-6">
-                <div className="flex flex-col items-center lg:items-start gap-4 mb-6">
-                    <h3 className="text-xl font-semibold">We'd Love to Hear From You!</h3>
-                    <p className="text-gray-600 text-center lg:text-left">Whether you have a question about our services, pricing, or anything else, our team is ready to answer all your questions.</p>
-                    <p className="text-gray-600 text-center lg:text-left">Feel free to reach out via the contact form or contact us directly at:</p>
-                    <h3 className="text-xl font-semibold">Contacts Info</h3>
-                    <p className="text-gray-600"><strong><FontAwesomeIcon icon={faEnvelope} className='text-[#FFB000]'/> Email:</strong> <a href="mailto:contact@brainleads.com" className="font-semibold">brainleadsgroup@gmail.com</a></p>
-                    <p className="text-gray-600"><strong><FontAwesomeIcon icon={faPhone} className='text-[#FFB000]'/> Phone:</strong> <a href="tel:+1 204 952 4290" className="font-semibold">+1 204 952 4290</a></p>
-                    <p className="text-gray-600 text-center lg:text-left"><strong><FontAwesomeIcon icon={faMapLocation} className='text-[#FFB000]'/> Address:</strong> 63 mckenzie street winnipeg  R2W5N1</p>
-                    <p className="text-gray-600"><strong><FontAwesomeIcon icon={faClock} className='text-[#FFB000]'/> Hours:</strong> Mon - Fri, 9AM - 4PM</p>
-
-                </div>
-                <form 
-                    ref={form}
-                    onSubmit={sendEmail}
-                    className="w-full mx-auto bg-[#333333] p-6 rounded-lg shadow-lg">
-                    <div className="mb-4">
-                        <label className="block text-white mb-2" htmlFor="name">Name</label>
-                        <input type="text" id="name" name='name' placeholder="Your name" className="w-full p-3 border border-gray-300 rounded" required />
-                    </div>
-                    <div className="mb-4">
-                        <label className="block text-white" htmlFor="email">Email</label>
-                        <input type="email" id="email" name='email' placeholder='Your email' className="w-full p-3 border border-gray-300 rounded" required />
-                    </div>
-                    <div className="mb-4">
-                        <label className="block text-white mb-2" htmlFor="message">Message</label>
-                        <textarea id="message" name='message' rows="4" placeholder="Your message" className="w-full p-3 border border-gray-300 rounded" required></textarea>
-                    </div>
-                    <button type="submit" className="primary-bg w-full py-3 rounded-full text-white font-semibold transition-colors duration-300 hover:bg-[#FFC734]">
-                        Send Message
-                    </button>
-                </form>
+            <div>
+              <label className="block text-white mb-2" htmlFor="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="Your email" className="w-full p-3 rounded-md border border-gray-400" required />
             </div>
-        </section>
-    );
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+            <div>
+              <label className="block text-white mb-2" htmlFor="phone">Phone</label>
+              <input type="text" id="phone" name="phone" placeholder="Your phone" className="w-full p-3 rounded-md border border-gray-400" />
+            </div>
+            <div>
+              <label className="block text-white mb-2" htmlFor="company">Company Name</label>
+              <input type="text" id="company" name="company" placeholder="Your company" className="w-full p-3 rounded-md border border-gray-400" />
+            </div>
+          </div>
+          <div className="mb-6">
+            <label className="block text-white mb-2" htmlFor="message">Message / Project Details</label>
+            <textarea id="message" name="message" rows="4" placeholder="Your message" className="w-full p-3 rounded-md border border-gray-400" required></textarea>
+          </div>
+          <button
+            type="submit"
+            className="w-full py-3 rounded-full bg-gradient-to-r from-[#FFB000] to-[#FFC734] text-white font-semibold text-lg transition-transform duration-300 hover:scale-105"
+          >
+            Book My Consultation
+          </button>
+        </motion.form>
+      </div>
+    </section>
+  );
 }

@@ -6,14 +6,14 @@ import Services from "./components/Services";
 // import Process from "./components/Process";
 import Testimonials from "./components/Testimonials";
 // import CTA from "./components/CTA";
-import Footer from "./components/Footer";
+//import Footer from "./components/Footer";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useState,useEffect } from 'react';
 // import Benefits from "./components/Benefits";
 // import CTA2 from "./components/CTA2";
 import WhyChooseUs from "./components/WhyChooseUs.js";
-import Contact from "./components/Contact";
+import Contact from "./components/Contact.js";
 // import Partners from "./components/Partners";
 
 
