@@ -141,7 +141,7 @@ export default function Services() {
       
       <div className="flex flex-col lg:flex-row lg:px-0 px-[25px]">
         
-        <aside className="hidden lg:flex w-1/2 sticky top-0 h-screen items-center justify-center bg-black">
+        <aside className="hidden lg:flex w-1/2 sticky top-0 h-screen items-center justify-center bg-white">
           <AnimatePresence mode="wait">
             <motion.img
               key={sections[activeIndex].image}

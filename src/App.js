@@ -6,7 +6,7 @@ import Services from "./components/Services";
 // import Process from "./components/Process";
 import Testimonials from "./components/Testimonials";
 // import CTA from "./components/CTA";
-//import Footer from "./components/Footer";
+import Footer from "./components/Footer";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useState,useEffect } from 'react';
@@ -14,7 +14,7 @@ import { useState,useEffect } from 'react';
 // import CTA2 from "./components/CTA2";
 import WhyChooseUs from "./components/WhyChooseUs.js";
 import Contact from "./components/Contact.js";
-// import Partners from "./components/Partners";
+import Partners from "./components/Partners";
 
 
 function App() {
@@ -37,10 +37,10 @@ function App() {
       <Testimonials />
       {/* <Benefits /> */}
       {/* <Results /> */}
-      {/* <Partners /> */}
+      <Partners />
       {/* <CTA2 /> */}
-      {/* <Contact /> */}
-      {/* <Footer /> */}
+      <Contact />
+      <Footer />
     </div>
   );
 }

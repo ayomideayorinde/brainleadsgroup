@@ -13,10 +13,10 @@ export default function Contact() {
     e.preventDefault();
     emailjs
       .sendForm(
-        'service_bk0zpsj',     // your service ID
-        'template_k4ddrmf',    // your template ID
+        'service_bk0zpsj',     // service ID
+        'template_k4ddrmf',    // template ID
         form.current,
-        'iWKvxS1STVD6PeFco'    // your public key
+        'iWKvxS1STVD6PeFco'    // public key
       )
       .then(
         (result) => {
@@ -36,19 +36,21 @@ export default function Contact() {
       className="relative bg-[#F8F9FC] py-16 px-6 lg:px-[80px] overflow-hidden"
       id="contact"
     >
-      {/* floating gradient accent background */}
-      <motion.div
+      
+      {/* <motion.div
         className="absolute -top-20 -right-20 w-[300px] h-[300px] rounded-full bg-gradient-to-r from-[#FFB000] to-[#FFC734] opacity-30 blur-3xl"
-        animate={{ y: [0, 30, 0], x: [0, -30, 0] }}
-        transition={{ repeat: Infinity, duration: 10, ease: "easeInOut" }}
+        // animate={{ y: [0, 30, 0], x: [0, -30, 0] }}
+        animate={{ y: [0, 15, 0] }}
+        transition={{ repeat: Infinity, duration: 20, ease: "easeInOut" }}
       />
       <motion.div
         className="absolute -bottom-20 -left-20 w-[250px] h-[250px] rounded-full bg-gradient-to-r from-[#333333] to-[#666666] opacity-20 blur-2xl"
-        animate={{ y: [0, -40, 0], x: [0, 40, 0] }}
-        transition={{ repeat: Infinity, duration: 12, ease: "easeInOut" }}
-      />
+        // animate={{ y: [0, -40, 0], x: [0, 40, 0] }}
+        animate={{ y: [0, -15, 0] }}
+        transition={{ repeat: Infinity, duration: 25, ease: "easeInOut" }}
+      /> */}
 
-      {/* header */}
+      
       <div className="relative text-center mb-12">
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
@@ -68,10 +70,10 @@ export default function Contact() {
         </motion.p>
       </div>
 
-      {/* main content */}
+      
       <div className="relative grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
         
-        {/* Contact Info */}
+        
         <motion.div
           initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -97,7 +99,7 @@ export default function Contact() {
           </p>
         </motion.div>
 
-        {/* Contact Form */}
+        
         <motion.form
           ref={form}
           onSubmit={sendEmail}
