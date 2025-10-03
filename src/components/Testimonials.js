@@ -10,25 +10,21 @@ const testimonials = [
     name: "Bob Brown",
     feedback: "Brainleads Group tripled our revenue in 6 months!",
     rating: fivestar,
-    avatar: "/images/male.png",
   },
   {
     name: "Eve Wilson",
     feedback: "Their storytelling campaigns made our brand unforgettable.",
     rating: fivestar,
-    avatar: "/images/female.png",
   },
   {
     name: "Charlie Davis",
     feedback: "A professional team that delivers results every time.",
     rating: fourdotfivestar,
-    avatar: "/images/male.png",
   },
   {
     name: "Sophia Lee",
     feedback: "Their franchise strategy expanded us nationwide!",
     rating: fivestar,
-    avatar: "/images/female.png",
   },
 ];
 
@@ -43,7 +39,10 @@ export default function Testimonials() {
   }, []);
 
   return (
-    <section className="relative bg-[#0f0f0f] py-24 overflow-hidden" id="testimonials">
+    <section 
+      id="testimonials"
+      className="relative bg-[#0f0f0f] py-24 overflow-hidden"
+    >
       {/* Floating gradient accent */}
       <motion.div
         className="absolute top-20 left-10 w-[200px] h-[200px] bg-[#FFB000] rounded-full blur-[150px] opacity-20"
@@ -77,11 +76,6 @@ export default function Testimonials() {
               transition={{ duration: 0.6 }}
             >
               <div className="bg-white/10 backdrop-blur-xl border border-white/10 p-10 rounded-3xl shadow-lg max-w-xl text-center text-white">
-                <img
-                  src={t.avatar}
-                  alt={t.name}
-                  className="w-20 h-20 rounded-full mx-auto mb-4 border-4 border-[#FFB000]"
-                />
                 <img src={t.rating} alt="Rating" className="w-28 mx-auto mb-4" />
                 <p className="text-lg italic leading-relaxed">“{t.feedback}”</p>
                 <h3 className="mt-6 text-xl font-semibold text-[#FFB000]">

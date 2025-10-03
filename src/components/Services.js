@@ -80,6 +80,7 @@ function Section({ section, index, setActiveIndex }) {
   return (
     <section
       ref={ref}
+      id="services"
       className="min-h-[50vh] lg:min-h-screen flex flex-col justify-center items-start p-6 md:p-12"
     >
       

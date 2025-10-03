@@ -17,7 +17,10 @@ const logos = [
 
 export default function PartnersSection() {
   return (
-    <section className="bg-white py-[120px] px-6 md:px-12 lg:px-20 font-['Helvetica_Neue','Helvetica','Arial',sans-serif]">
+    <section 
+      id="partners"
+      className="bg-white py-[120px] px-6 md:px-12 lg:px-20 font-['Helvetica_Neue','Helvetica','Arial',sans-serif]"
+    >
       {/* Title with Scribble Underline */}
       <motion.h2
         initial={{ opacity: 0, y: 30 }}

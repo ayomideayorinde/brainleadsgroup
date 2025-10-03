@@ -21,7 +21,10 @@ export default function WhyChooseBrainleads() {
   ];
 
   return (
-    <section className="relative w-full lg:min-h-screen flex flex-col lg:flex-row items-center justify-center bg-gradient-to-br from-black via-gray-900 to-gray-800 text-white overflow-hidden px-[25px] lg:px-[80px] py-16">
+    <section 
+      id="whychooseus"
+      className="relative w-full lg:min-h-screen flex flex-col lg:flex-row items-center justify-center bg-gradient-to-br from-black via-gray-900 to-gray-800 text-white overflow-hidden px-[25px] lg:px-[80px] py-16"
+    >
       
       <div className="flex-1 relative z-10 text-left lg:pr-12">
         <motion.h2

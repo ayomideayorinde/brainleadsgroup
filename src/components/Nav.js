@@ -1,62 +1,105 @@
-import logo from '../assets/brainleads.png'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
-// import { faBar } from '@fortawesome/free-brands-svg-icons'
-import { useState, useRef, useEffect } from 'react'
+import logo from "../assets/brainleads.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
+import { useState, useRef, useEffect } from "react";
 
 export default function Nav() {
-    const [showMenu, setShowMenu] = useState(false)
+  const [showMenu, setShowMenu] = useState(false);
+  const menuRef = useRef(null);
 
-    const menuRef = useRef(null)
+  // Close on outside click or scroll
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setShowMenu(false);
+      }
+    };
+    const handleScroll = () => setShowMenu(false);
 
-    // Detect clicks outside the menu to close it
-    useEffect(() => {
-        const handleClickOutside = (event) => {
-            if (menuRef.current && !menuRef.current.contains(event.target)) {
-                setShowMenu(false)
-            }
-        }
-        const handleScroll = () => {
-            setShowMenu(false);
-        }
-        document.addEventListener('mousedown', handleClickOutside)
-        window.addEventListener('scroll', handleScroll);
-        return () => {
-        document.removeEventListener('mousedown', handleClickOutside)
-        window.addEventListener('scroll', handleScroll);
-        }
-    }, [])
+    document.addEventListener("mousedown", handleClickOutside);
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
-    return (
-        <section className="z-[999] absolute top-0 left-0 py-3 lg:py-6 lg:px-[50px] px-[25px] right-0 rounded-0 bg-white">
-            {/* <section className="absolute z-[999] top-5 left-0 py-2 lg:px-[50px] px-[25px] lg:mx-[50px] mx-[25px] right-0 rounded-full shadow-lg"> */}
-            <div className='flex items-center justify-between '>
-                <a href='/' className='z-[999]'>
-                    <img src={logo} className='w-[100px]'/>
+  const handleLinkClick = () => {
+    setShowMenu(false); // closes when clicking a link
+  };
+
+  return (
+    <nav className="fixed top-0 left-0 w-full bg-white shadow-md z-[999]">
+      <div className="flex items-center justify-between px-6 lg:px-12 py-4">
+        {/* Logo */}
+        <a href="/" className="flex items-center">
+          <img src={logo} alt="Brainleads Logo" className="w-[120px]" />
+        </a>
+
+        {/* Toggle Button */}
+        <button
+          onClick={() => setShowMenu(true)}
+          className="p-2 rounded-md hover:bg-gray-100 transition"
+        >
+          <FontAwesomeIcon icon={faBars} className="text-2xl text-gray-700" />
+        </button>
+      </div>
+
+      {/* Overlay background */}
+      {showMenu && (
+        <div className="fixed inset-0 bg-black/40 z-[998]" onClick={() => setShowMenu(false)}></div>
+      )}
+
+      {/* Sidebar Menu */}
+      <div
+        ref={menuRef}
+        className={`fixed top-0 right-0 h-screen lg:w-[50%] w-full bg-white shadow-2xl z-[999] transform transition-transform duration-500 ease-in-out ${
+          showMenu ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        {/* Close Button */}
+        <div className="flex justify-end p-5">
+          <button
+            onClick={() => setShowMenu(false)}
+            className="p-2 rounded-md hover:bg-gray-100 transition"
+          >
+            <FontAwesomeIcon icon={faXmark} className="text-2xl text-gray-700" />
+          </button>
+        </div>
+
+        {/* Menu Links */}
+        <ul className="flex flex-col items-start gap-6 px-6">
+          {["Home", "About", "Services", "Why Choose Us", "Testimonials", "Partners", "Contact"].map(
+            (item, idx) => (
+              <li key={idx}>
+                <a
+                  href={
+                    item === "Home"
+                      ? "/"
+                      : "#" + item.replace(/\s+/g, "").toLowerCase()
+                  }
+                  onClick={handleLinkClick}
+                  className="block text-2xl text-gray-800 font-medium hover:text-[#FFB000] transition-colors duration-300"
+                >
+                  {item}
                 </a>
-                <div ref={menuRef} className={`${showMenu? 'flex openmenu':'hidden closemenu'} z-[999] lg:relative lg:top-0 absolute top-16 mt-2 lg:mt-0 lg:block flex-col items-center gap-5 bg-white lg:bg-inherit w-full lg:w-auto right-0 left-0 lg:p-0 p-5  transition-all duration-[2s] ease-in-out`}>
-                    <ul className='flex items-center lg:flex-row flex-col gap-5 '>
-                        <li className='cursor-pointer hover:bg-[#FFC734] px-4 py-1 rounded-lg'><a href='/'>Home</a></li>
-                        <li className='cursor-pointer hover:bg-[#FFC734] px-4 py-1 rounded-lg'><a href='#footer'>About</a></li>
-                        <li className='cursor-pointer hover:bg-[#FFC734] px-4 py-1 rounded-lg'><a href='#services'>Services</a></li>
-                        <li className='cursor-pointer hover:bg-[#FFC734] px-4 py-1 rounded-lg'><a href='#values'>Our Values</a></li>
-                        <li className='cursor-pointer hover:bg-[#FFC734] px-4 py-1 rounded-lg'><a href='#benefits'>Benefits</a></li>
-                        <li className='cursor-pointer hover:bg-[#FFC734] px-4 py-1 rounded-lg'><a href='#contact'>Contact</a></li>
-                    </ul>
-                    <button className='lg:hidden primary-bg px-4 py-1 rounded-full font-semibold transition-colors duration-300'>
-                        <a href='https://calendly.com/brainleadsgroup/tailor-marketing-insight-for-your-business' target='_blank'>Book A Free Consultation</a>
-                    </button>
-                </div>
-                <div className='z-[999] hidden lg:block'>
-                    <button className='primary-bg px-4 py-1 rounded-full font-semibold transition-colors duration-300'>
-                        <a href='https://calendly.com/brainleadsgroup/tailor-marketing-insight-for-your-business' target='_blank'>Book A Free Consultation</a>
-                    </button>
-                </div>
-                <div onClick={()=>setShowMenu(!showMenu)} className='z-[998] lg:hidden'>
-                    <FontAwesomeIcon icon={faBars} className='text-2xl mx-2 cursor-pointer hover:text-[#FFB000] transition-colors duration-300' />
-                </div>
-            </div>
-            <div className='bg-white opacity-50 w-full h-full absolute top-0 left-0 right-0 rounded-full'></div>
-        </section>
-    )
+              </li>
+            )
+          )}
+
+          {/* CTA Button */}
+          <li className="mt-6 w-full">
+            <a
+              href="https://calendly.com/brainleadsgroup/tailor-marketing-insight-for-your-business"
+              target="_blank"
+              onClick={handleLinkClick}
+              className="block w-full text-center bg-[#FFB000] hover:bg-[#e6a700] text-white px-5 py-3 rounded-full font-semibold transition-colors duration-300"
+            >
+              Book A Free Consultation
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  );
 }
