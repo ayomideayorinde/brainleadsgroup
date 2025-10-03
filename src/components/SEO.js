@@ -14,6 +14,7 @@ export default function SEO({
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="robots" content="index, follow" />
+      <meta name="google-site-verification" content="vkAzhWG4ZC7mlpnQ45M6vADtvC_R8nMH9wp_tA5YNqI" />
       <link rel="canonical" href={url} />
 
       {/* Open Graph */}
