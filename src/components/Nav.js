@@ -29,7 +29,7 @@ export default function Nav() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-white shadow-md z-[9999999999]">
+    <nav className="top-0 left-0 w-full bg-white shadow-md z-[9999999999]">
       <div className="flex items-center justify-between px-6 lg:px-12 py-4">
         {/* Logo */}
         <a href="/" className="flex items-center">
