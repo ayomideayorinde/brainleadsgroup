@@ -7,6 +7,15 @@ export default function Nav() {
   const [showMenu, setShowMenu] = useState(false);
   const menuRef = useRef(null);
 
+  // Toggle body class when menu state changes
+  useEffect(() => {
+    if (showMenu) {
+      document.body.classList.add("menu-open");
+    } else {
+      document.body.classList.remove("menu-open");
+    }
+  }, [showMenu]);
+
   // Close on outside click or scroll
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -24,12 +33,10 @@ export default function Nav() {
     };
   }, []);
 
-  const handleLinkClick = () => {
-    setShowMenu(false); // closes when clicking a link
-  };
+  const handleLinkClick = () => setShowMenu(false);
 
   return (
-    <nav className="top-0 left-0 w-full bg-white shadow-md z-[9999999999]">
+    <nav className="top-0 left-0 w-full bg-white shadow-md z-[999]">
       <div className="flex items-center justify-between px-6 lg:px-12 py-4">
         {/* Logo */}
         <a href="/" className="flex items-center">
@@ -45,15 +52,18 @@ export default function Nav() {
         </button>
       </div>
 
-      {/* Overlay background */}
+      {/* Overlay */}
       {showMenu && (
-        <div className="fixed inset-0 bg-black/40 z-[998]" onClick={() => setShowMenu(false)}></div>
+        <div
+          className="fixed inset-0 bg-black/40 z-[2147483646]"
+          onClick={() => setShowMenu(false)}
+        ></div>
       )}
 
-      {/* Sidebar Menu */}
+      {/* Sidebar */}
       <div
         ref={menuRef}
-        className={`fixed top-0 right-0 h-screen lg:w-[50%] w-full bg-white shadow-2xl z-[999] transform transition-transform duration-500 ease-in-out ${
+        className={`nav-sidebar fixed top-0 right-0 h-screen lg:w-[50%] w-[100%] bg-white shadow-2xl transform transition-transform duration-500 ease-in-out ${
           showMenu ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -73,11 +83,7 @@ export default function Nav() {
             (item, idx) => (
               <li key={idx}>
                 <a
-                  href={
-                    item === "Home"
-                      ? "/"
-                      : "#" + item.replace(/\s+/g, "").toLowerCase()
-                  }
+                  href={item === "Home" ? "/" : "#" + item.replace(/\s+/g, "").toLowerCase()}
                   onClick={handleLinkClick}
                   className="block text-2xl text-gray-800 font-medium hover:text-[#FFB000] transition-colors duration-300"
                 >
@@ -87,7 +93,7 @@ export default function Nav() {
             )
           )}
 
-          {/* CTA Button */}
+          {/* CTA */}
           <li className="mt-6 w-full">
             <a
               href="https://calendly.com/brainleadsgroup/tailor-marketing-insight-for-your-business"

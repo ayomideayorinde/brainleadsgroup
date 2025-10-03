@@ -11,12 +11,12 @@
     />
 
     <!-- Facebook -->
-        <meta property="og:type" content="website">
+        <!-- <meta property="og:type" content="website">
         <meta property="og:title" content="BrainLeads Marketing Firm – Your Brand Deserves to Prosper">
         <meta property="og:description" content="AI-powered digital marketing and advertising solutions, creating scalable campaigns for business growth across North America and beyond.">
         <meta property="og:image" content="https://brainleadsgroup.com/static/media/brainleads.5c9d2b18e8e311604683.png">
         <meta property="og:url" content="https://brainleadsgroup.com">
-        <meta property="og:site_name" content="BrainLeads Marketing Firm">
+        <meta property="og:site_name" content="BrainLeads Marketing Firm"> -->
     <!-- End of Facebook Meta -->
 
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/brainleads.png" />
@@ -25,7 +25,7 @@
     
     <title>BrainLeads Marketing Firm – Your Brand Deserves to Prosper</title>
 
-    <script type="application/ld+json">
+    <!-- <script type="application/ld+json">
         {
           "@context": "https://schema.org",
           "@type": "Organization",
@@ -38,7 +38,22 @@
             "https://www.instagram.com/brainleadsgroup"
           ]
         }
-        </script>
+        </script> -->
+
+        <style>
+          /* Sidebar above everything */
+          .nav-sidebar {
+            z-index: 2147483647 !important; /* max safe z-index */
+          }
+
+          /* Hide Tawk.to widget when menu is open */
+          body.menu-open #tawkchat-container,
+          body.menu-open .tawk-min-container {
+            display: none !important;
+          }
+        </style>
+
+
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
