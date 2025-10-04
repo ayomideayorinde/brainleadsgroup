@@ -17,6 +17,7 @@ const sections = [
     ],
     cta: "Let’s Tell Your Brand Story",
     image: "/images/campaign.webp",
+    sketch: "/images/campaign.svg",
   },
   {
     title: "Digital & Non-Digital Distribution – Maximum Reach",
@@ -28,6 +29,7 @@ const sections = [
     ],
     cta: "Schedule a Distribution Strategy Call",
     image: "/images/digital.jpg",
+    sketch: "/images/social.svg",
   },
   {
     title: "Sales & Revenue Strategy – Tripling Your Growth",
@@ -42,6 +44,7 @@ const sections = [
     ],
     cta: "Start Tripling Your Sales Today",
     image: "/images/sales.webp",
+    sketch: "/images/sales.svg",
   },
   {
     title: "Lead Generation & Retention – Capture, Convert, Keep",
@@ -54,6 +57,7 @@ const sections = [
     ],
     cta: "Generate More Leads Today",
     image: "/images/lead.jpg",
+    sketch: "/images/lead.svg",
   },
   {
     title: "Franchise Growth & Marketing – Expand Nationwide",
@@ -67,6 +71,7 @@ const sections = [
     ],
     cta: "Start Your Franchise Journey Today",
     image: "/images/Franchise.webp",
+    sketch: "/images/data.svg",
   },
 ];
 
@@ -83,7 +88,7 @@ function Section({ section, index, setActiveIndex }) {
       id="services"
       className="min-h-[50vh] lg:min-h-screen flex flex-col justify-center items-start p-6 md:p-12"
     >
-      
+      {/* Image for mobile */}
       <div className="block lg:hidden mb-6 mt-12 w-full">
         <motion.img
           src={section.image}
@@ -107,6 +112,21 @@ function Section({ section, index, setActiveIndex }) {
         ))}
       </ul>
 
+      {/* Decorative geometric sketch */}
+      <motion.div
+        className="w-full flex justify-center mb-6"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.6 }}
+      >
+        <img
+          src={section.sketch}
+          alt="decorative pattern"
+          className="w-[250px] h-auto opacity-70"
+        />
+      </motion.div>
+
       <motion.button
         whileHover={{ scale: 1.07 }}
         whileTap={{ scale: 0.95 }}
@@ -123,7 +143,6 @@ export default function Services() {
 
   return (
     <div className="flex flex-col">
-      
       <motion.div
         className="text-center py-12 px-[25px] lg:px-[50px]"
         initial={{ opacity: 0, y: 30 }}
@@ -132,16 +151,14 @@ export default function Services() {
         viewport={{ once: true }}
       >
         <h1 className="text-[32px] lg:text-[40px] font-bold">Our Services</h1>
-        <p className="text-gray-600 text-[18px] lg:text-[20px]  mx-auto mt-3 max-w-3xl">
+        <p className="text-gray-600 text-[18px] lg:text-[20px] mx-auto mt-3 max-w-3xl">
           From storytelling to distribution, sales strategy, lead generation,
           and franchise growth — we build a complete ecosystem for your brand’s
           success.
         </p>
       </motion.div>
 
-      
       <div className="flex flex-col lg:flex-row lg:px-0 px-[25px]">
-        
         <aside className="hidden lg:flex w-1/2 sticky top-0 h-screen items-center justify-center bg-white">
           <AnimatePresence mode="wait">
             <motion.img
@@ -157,7 +174,6 @@ export default function Services() {
           </AnimatePresence>
         </aside>
 
-        
         <main className="w-full lg:w-1/2">
           {sections.map((sec, i) => (
             <Section

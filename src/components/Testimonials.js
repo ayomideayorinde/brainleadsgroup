@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import fivestar from "../assets/5star.png";
 import fourdotfivestar from "../assets/4.5star.png";
+// import fourstar from "/images/4star.png"
 
 const testimonials = [
   {
@@ -26,7 +27,68 @@ const testimonials = [
     feedback: "Their franchise strategy expanded us nationwide!",
     rating: fivestar,
   },
+  {
+    name: "Daniel Thompson",
+    feedback:
+      "Working with Brainleads was the best business decision we made this year! Their team produced a stunning campaign video that brought our brand to life. The results were instant — more engagement, better leads, and real conversions. Highly recommend!",
+    rating: fivestar,
+  },
+  {
+    name: "Laura Adams",
+    feedback:
+      "Professional, creative, and always ahead of schedule. From video ads to digital strategy, they handled everything with precision. Our franchise inquiries doubled within two months.",
+    rating: "/images/4star.png",
+  },
+  {
+    name: "Michael Roberts",
+    feedback:
+      "They don’t just market — they build brands. Brainleads helped us refine our message and run a campaign that reached thousands. The video production was cinematic, and the team really understood our target audience.",
+    rating: fivestar,
+  },
+  {
+    name: "Grace Mitchell",
+    feedback:
+      "Great for startups looking to scale! As a small business, we needed affordable lead generation and exposure. Their digital campaigns gave us steady client flow. Definitely worth the investment.",
+    rating: "/images/4star.png",
+  },
+  {
+    name: "James Carter",
+    feedback:
+      "The franchise expansion service was a game-changer. We’ve opened three new locations since partnering with Brainleads. They didn’t just market for us — they built a strategy that attracted serious franchisees.",
+    rating: fivestar,
+  },
+  {
+    name: "Olivia Turner",
+    feedback:
+      "Excellent communication and modern marketing approach. Every week, they updated us with performance reports and fresh ideas. Their campaign videos are top-tier — looks like something straight from a major brand.",
+    rating: "/images/4star.png",
+  },
+  {
+    name: "Henry Brooks",
+    feedback:
+      "Our online visibility skyrocketed! Before Brainleads, we struggled with reach. Their SEO, ads, and content creation brought in consistent leads. Within weeks, we started closing high-value clients.",
+    rating: fivestar,
+  },
+  {
+    name: "Isabella Scott",
+    feedback:
+      "They make marketing look easy. The creative direction, storytelling, and video editing were flawless. Their team understands both branding and performance — a rare combo.",
+    rating: "/images/4star.png",
+  },
+  {
+    name: "David Morgan",
+    feedback:
+      "If you want results, this is the team. We launched a new product campaign and Brainleads handled everything — scriptwriting, production, digital rollout. The professionalism is unmatched.",
+    rating: fivestar,
+  },
+  {
+    name: "Emily Johnson",
+    feedback:
+      "Brainleads is like having your own in-house marketing department. From concept to execution, they cover it all — video, digital marketing, and expansion strategy. I’ve worked with agencies before, but none delivered this level of creativity and consistency.",
+    rating: fivestar,
+  },
 ];
+
 
 export default function Testimonials() {
   const [index, setIndex] = useState(0);
