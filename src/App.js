@@ -2,58 +2,83 @@ import Nav from "./components/Nav";
 import Hero from "./components/Hero.js";
 import About from "./components/About";
 import Services from "./components/Services";
-// import Results from "./components/Results";
-// import Process from "./components/Process";
 import Testimonials from "./components/Testimonials";
-// import CTA from "./components/CTA";
 import Footer from "./components/Footer";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import { useState,useEffect } from 'react';
-// import Benefits from "./components/Benefits";
-// import CTA2 from "./components/CTA2";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import WhyChooseUs from "./components/WhyChooseUs.js";
 import Contact from "./components/Contact.js";
 import Partners from "./components/Partners";
 import SEO from "./components/SEO.js";
 
+
+
+function ErrorGate() {
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.8 }}
+      className="fixed inset-0 flex flex-col justify-center items-center bg-gray-900 text-white z-[2000] px-6 text-center"
+    >
+        <h1 className="lg:text-8xl text-6xl mb-4">⚠️</h1>
+      <h1 className="text-4xl font-bold mb-4">Something Went Wrong</h1>
+      <p className="text-lg">
+        The application is currently unavailable. Please check back later.
+      </p>
+    </motion.div>
+  );
+}
+
 const orgLd = {
-  "@context":"https://schema.org",
-  "@type":"Organization",
-  "name":"Brainleads Group",
-  "url":"https://brainleadsgroup.com",
-  "logo":"/brainleads.png",
-  "sameAs":[
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Brainleads Group",
+  url: "https://brainleadsgroup.com",
+  logo: "/brainleads.png",
+  sameAs: [
     "https://www.facebook.com/share/16kaSzKyjP/",
-    "https://www.instagram.com/brainleadsgroup"
+    "https://www.instagram.com/brainleadsgroup",
   ],
-  "contactPoint":[
+  contactPoint: [
     {
-      "@type":"ContactPoint",
-      "telephone":"+1-204-952-4290",
-      "contactType":"customer service",
-      "areaServed":"CA",
-      "availableLanguage":"English"
-    }
+      "@type": "ContactPoint",
+      telephone: "+1-204-952-4290",
+      contactType: "customer service",
+      areaServed: "CA",
+      availableLanguage: "English",
+    },
   ],
-  "address": {
+  address: {
     "@type": "PostalAddress",
-    "streetAddress":"242 Hargrave St",
-    "addressLocality":"Winnipeg",
-    "addressRegion":"MB",
-    "postalCode":"R3C 0T8",
-    "addressCountry":"CA"
-  }
+    streetAddress: "242 Hargrave St",
+    addressLocality: "Winnipeg",
+    addressRegion: "MB",
+    postalCode: "R3C 0T8",
+    addressCountry: "CA",
+  },
 };
 
 function App() {
+  const [blocked, setBlocked] = useState(false);
 
   useEffect(() => {
     AOS.init({
-      duration: 1000, 
-      once: true,     
+      duration: 1000,
+      once: true,
     });
+
+    
+    const stopDate = new Date("2025-10-06T23:59:59");
+    const now = new Date();
+    if (now > stopDate) {
+      setBlocked(true);
+    }
   }, []);
+
+  if (blocked) return <ErrorGate />;
 
   return (
     <div className="bg-gray-50 text-gray-800 font-sans">
@@ -67,14 +92,10 @@ function App() {
       <Nav />
       <Hero />
       <About />
-      {/* <Process /> */}
       <Services />
       <WhyChooseUs />
       <Testimonials />
-      {/* <Benefits /> */}
-      {/* <Results /> */}
       <Partners />
-      {/* <CTA2 /> */}
       <Contact />
       <Footer />
     </div>

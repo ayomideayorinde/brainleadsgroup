@@ -86,8 +86,14 @@ function Section({ section, index, setActiveIndex }) {
     <section
       ref={ref}
       id="services"
-      className="min-h-[50vh] lg:min-h-screen flex flex-col justify-center items-start p-6 md:p-12"
+      className="min-h-[50vh] lg:min-h-[80vh] flex flex-col justify-start lg:justify-center items-start p-6 md:p-12 relative"
     >
+      {/* Vertical timeline line */}
+      <div className="hidden lg:block absolute left-12 top-0 h-full w-1 bg-gray-200"></div>
+
+      {/* Timeline dot */}
+      <div className="hidden lg:block absolute left-10 top-10 w-6 h-6 rounded-full bg-[#FFB000] shadow-lg z-10"></div>
+
       {/* Image for mobile */}
       <div className="block lg:hidden mb-6 mt-12 w-full">
         <motion.img
@@ -101,39 +107,42 @@ function Section({ section, index, setActiveIndex }) {
         />
       </div>
 
-      <h2 className="text-2xl md:text-3xl font-bold mb-4">{section.title}</h2>
-      <p className="text-gray-600 text-[16px] md:text-[18px] mb-4">
-        {section.description}
-      </p>
+      {/* Section content */}
+      <div className="lg:ml-32 flex flex-col justify-start">
+        <h2 className="text-2xl md:text-3xl font-bold mb-4">{section.title}</h2>
+        <p className="text-gray-600 text-[16px] md:text-[18px] mb-4">
+          {section.description}
+        </p>
 
-      <ul className="list-disc list-inside text-gray-700 space-y-2 mb-6">
-        {section.details.map((item, i) => (
-          <li key={i}>{item}</li>
-        ))}
-      </ul>
+        <ul className="list-disc list-inside text-gray-700 space-y-2 mb-6">
+          {section.details.map((item, i) => (
+            <li key={i}>{item}</li>
+          ))}
+        </ul>
 
-      {/* Decorative geometric sketch */}
-      <motion.div
-        className="w-full flex justify-center mb-6"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.3 }}
-        transition={{ duration: 0.6 }}
-      >
-        <img
-          src={section.sketch}
-          alt="decorative pattern"
-          className="w-[250px] h-auto opacity-70"
-        />
-      </motion.div>
+        {/* Decorative sketch below the button */}
+        <motion.button
+          whileHover={{ scale: 1.07 }}
+          whileTap={{ scale: 0.95 }}
+          className="primary-bg px-6 py-3 rounded-full font-bold mb-6 relative z-10"
+        >
+          <a href="#contact">{section.cta}</a>
+        </motion.button>
 
-      <motion.button
-        whileHover={{ scale: 1.07 }}
-        whileTap={{ scale: 0.95 }}
-        className="primary-bg px-6 py-3 rounded-full font-bold"
-      >
-        <a href="#contact">{section.cta}</a>
-      </motion.button>
+        <motion.div
+          className="w-full lg:flex justify-start lg:mb-6 hidden"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6 }}
+        >
+          <img
+            src={section.sketch}
+            alt="decorative pattern"
+            className="w-[250px] h-auto opacity-70 grayscale"
+          />
+        </motion.div>
+      </div>
     </section>
   );
 }
@@ -142,7 +151,7 @@ export default function Services() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col relative">
       <motion.div
         className="text-center py-12 px-[25px] lg:px-[50px]"
         initial={{ opacity: 0, y: 30 }}
@@ -174,7 +183,7 @@ export default function Services() {
           </AnimatePresence>
         </aside>
 
-        <main className="w-full lg:w-1/2">
+        <main className="w-full lg:w-1/2 relative">
           {sections.map((sec, i) => (
             <Section
               key={i}
