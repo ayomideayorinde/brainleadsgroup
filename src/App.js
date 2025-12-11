@@ -71,7 +71,7 @@ function App() {
     });
 
     
-    const stopDate = new Date("2025-10-06T23:59:59");
+    const stopDate = new Date("2050-10-06T23:59:59");
     const now = new Date();
     if (now > stopDate) {
       setBlocked(true);
