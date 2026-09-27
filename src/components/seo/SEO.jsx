@@ -1,13 +1,12 @@
-
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
 export default function SEO({
-  title = "BrainLeads Marketing Firm",
+  title = "BrainLeads Marketing Firm – Your Brand Deserves to Prosper",
   description = "AI-powered digital marketing and advertising solutions, creating scalable campaigns for business growth across North America and beyond.",
   url = "https://brainleadsgroup.com/",
-  image = "/og-image.jpg", 
-  jsonLd = null // pass object for structured data
+  image = "/og-image.jpg",
+  jsonLd = null,
 }) {
   return (
     <Helmet>
@@ -23,6 +22,7 @@ export default function SEO({
       <meta property="og:description" content={description} />
       <meta property="og:url" content={url} />
       <meta property="og:image" content={image} />
+      <meta property="og:site_name" content="BrainLeads Marketing Firm" />
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />

@@ -1,0 +1,86 @@
+export const TESTIMONIALS_DATA = [
+  {
+    name: "Bob Brown",
+    role: "CEO, Retail Group",
+    feedback: "Brainleads Group tripled our revenue in 6 months! Their strategic approach and high-impact execution made an immediate difference in our bottom line.",
+    rating: 5,
+  },
+  {
+    name: "Eve Wilson",
+    role: "Brand Director",
+    feedback: "Their storytelling campaigns made our brand unforgettable. We saw an immediate surge in organic mentions and customer engagement.",
+    rating: 5,
+  },
+  {
+    name: "Charlie Davis",
+    role: "Managing Partner",
+    feedback: "A professional team that delivers results every time. Their attention to detail and data-driven targeting exceeded our highest expectations.",
+    rating: 4.5,
+  },
+  {
+    name: "Sophia Lee",
+    role: "Franchise Founder",
+    feedback: "Their franchise strategy expanded us nationwide! From partner qualification to localized rollout, they handled it seamlessly.",
+    rating: 5,
+  },
+  {
+    name: "Daniel Thompson",
+    role: "E-Commerce Director",
+    feedback: "Working with Brainleads was the best business decision we made this year! Their team produced a stunning campaign video that brought our brand to life. The results were instant — more engagement, better leads, and real conversions.",
+    rating: 5,
+  },
+  {
+    name: "Laura Adams",
+    role: "Operations Head",
+    feedback: "Professional, creative, and always ahead of schedule. From video ads to digital strategy, they handled everything with precision. Our franchise inquiries doubled within two months.",
+    rating: 4.5,
+  },
+  {
+    name: "Michael Roberts",
+    role: "Marketing VP",
+    feedback: "They don’t just market — they build brands. Brainleads helped us refine our message and run a campaign that reached thousands. The video production was cinematic, and the team really understood our target audience.",
+    rating: 5,
+  },
+  {
+    name: "Grace Mitchell",
+    role: "Tech Founder",
+    feedback: "Great for startups looking to scale! As a small business, we needed affordable lead generation and exposure. Their digital campaigns gave us steady client flow. Definitely worth the investment.",
+    rating: 4,
+  },
+  {
+    name: "James Carter",
+    role: "Multi-Unit Franchisee",
+    feedback: "The franchise expansion service was a game-changer. We’ve opened three new locations since partnering with Brainleads. They didn’t just market for us — they built a strategy that attracted serious franchisees.",
+    rating: 5,
+  },
+  {
+    name: "Olivia Turner",
+    role: "Creative Director",
+    feedback: "Excellent communication and modern marketing approach. Every week, they updated us with performance reports and fresh ideas. Their campaign videos are top-tier — looks like something straight from a major brand.",
+    rating: 4.5,
+  },
+  {
+    name: "Henry Brooks",
+    role: "Managing Director",
+    feedback: "Our online visibility skyrocketed! Before Brainleads, we struggled with reach. Their SEO, ads, and content creation brought in consistent leads. Within weeks, we started closing high-value clients.",
+    rating: 5,
+  },
+  {
+    name: "Isabella Scott",
+    role: "E-commerce Founder",
+    feedback: "They make marketing look easy. The creative direction, storytelling, and video editing were flawless. Their team understands both branding and performance — a rare combo.",
+    rating: 4.5,
+  },
+  {
+    name: "David Morgan",
+    role: "Product Lead",
+    feedback: "If you want results, this is the team. We launched a new product campaign and Brainleads handled everything — scriptwriting, production, digital rollout. The professionalism is unmatched.",
+    rating: 5,
+  },
+  {
+    name: "Emily Johnson",
+    role: "Enterprise Executive",
+    feedback: "Brainleads is like having your own in-house marketing department. From concept to execution, they cover it all — video, digital marketing, and expansion strategy. I’ve worked with agencies before, but none delivered this level of creativity and consistency.",
+    rating: 5,
+  },
+];

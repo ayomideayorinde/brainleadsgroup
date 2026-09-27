@@ -1,51 +1,33 @@
-import Nav from "./components/Nav";
-import Hero from "./components/Hero.js";
-import About from "./components/About";
-import Services from "./components/Services";
-import Testimonials from "./components/Testimonials";
-import Footer from "./components/Footer";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
-import WhyChooseUs from "./components/WhyChooseUs.js";
-import Contact from "./components/Contact.js";
-import Partners from "./components/Partners";
-import SEO from "./components/SEO.js";
-
-
-
-// function ErrorGate() {
-//   return (
-//     <motion.div
-//       initial={{ opacity: 0 }}
-//       animate={{ opacity: 1 }}
-//       transition={{ duration: 0.8 }}
-//       className="fixed inset-0 flex flex-col justify-center items-center bg-gray-900 text-white z-[2000] px-6 text-center"
-//     >
-//         <h1 className="lg:text-8xl text-6xl mb-4">⚠️</h1>
-//       <h1 className="text-4xl font-bold mb-4">Something Went Wrong</h1>
-//       <p className="text-lg">
-//         The application is currently unavailable. Please check back later.
-//       </p>
-//     </motion.div>
-//   );
-// }
+import React from "react";
+import {
+  Navbar,
+  Footer,
+  Hero,
+  About,
+  Services,
+  WhyChooseUs,
+  Testimonials,
+  Partners,
+  Contact,
+  BackToTop,
+  SEO,
+} from "./components";
+import { COMPANY_INFO } from "./constants/company";
 
 const orgLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "Brainleads Group",
+  name: COMPANY_INFO.name,
   url: "https://brainleadsgroup.com",
-  logo: "/brainleads.png",
+  logo: "https://brainleadsgroup.com/brainleads.png",
   sameAs: [
-    "https://www.facebook.com/share/16kaSzKyjP/",
-    "https://www.instagram.com/brainleadsgroup",
+    COMPANY_INFO.socials.facebook,
+    COMPANY_INFO.socials.instagram,
   ],
   contactPoint: [
     {
       "@type": "ContactPoint",
-      telephone: "+1-204-952-4290",
+      telephone: COMPANY_INFO.phone,
       contactType: "customer service",
       areaServed: "CA",
       availableLanguage: "English",
@@ -54,50 +36,35 @@ const orgLd = {
   address: {
     "@type": "PostalAddress",
     streetAddress: "242 Hargrave St",
-    addressLocality: "Winnipeg",
-    addressRegion: "MB",
-    postalCode: "R3C 0T8",
-    addressCountry: "CA",
+    addressLocality: COMPANY_INFO.locality,
+    addressRegion: COMPANY_INFO.region,
+    postalCode: COMPANY_INFO.postalCode,
+    addressCountry: COMPANY_INFO.country,
   },
 };
 
 function App() {
-  // const [blocked, setBlocked] = useState(false);
-
-  // useEffect(() => {
-  //   AOS.init({
-  //     duration: 1000,
-  //     once: true,
-  //   });
-
-    
-  //   const stopDate = new Date("2050-10-06T23:59:59");
-  //   const now = new Date();
-  //   if (now > stopDate) {
-  //     setBlocked(true);
-  //   }
-  // }, []);
-
-  // if (blocked) return <ErrorGate />;
-
   return (
-    <div className="bg-gray-50 text-gray-800 font-sans">
+    <div id="top" className="min-h-screen bg-white text-gray-900 font-sans selection:bg-[#FFB000] selection:text-black">
       <SEO
-        title="BrainLeads Marketing Firm"
+        title="BrainLeads Marketing Firm – Your Brand Deserves to Prosper"
         description="AI-powered digital marketing and advertising solutions, creating scalable campaigns for business growth across North America and beyond."
         url="https://brainleadsgroup.com/"
         image="/og-image.jpg"
         jsonLd={orgLd}
       />
-      <Nav />
-      <Hero />
-      <About />
-      <Services />
-      <WhyChooseUs />
-      <Testimonials />
-      <Partners />
-      <Contact />
+      <Navbar />
+      <main>
+        <Hero />
+        <About />
+        <Services />
+        <WhyChooseUs />
+        <Testimonials />
+        <Partners />
+        <Contact />
+      </main>
       <Footer />
+      <BackToTop />
     </div>
   );
 }

@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://brainleadsgroup.com/sitemap.xml
